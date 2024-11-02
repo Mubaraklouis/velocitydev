@@ -22,6 +22,11 @@ body{
 .mainSection{
     margin:3.75rem;
 }
+
+/* here is where all the code belonging the fonts of the website  */
+
+
+
 </style>
 
 

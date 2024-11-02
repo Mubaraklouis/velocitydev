@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import primaryButton from './primary-button.vue';
 </script>
 <template>
     <nav>
-        <div>
+        <div class="">
             <div>
                 Logo
             </div>
-            <ul>
+            <ul class="font-bold">
                 <li>
                     Home
                 </li>
@@ -21,23 +22,15 @@
                     Pages
                 </li>
             </ul>
+            <div>
+<primaryButton title="Subscribe"/>
+            </div>
 
         </div>
 
-        <!-- working on the primary button -->
-   <div class="primary-button">
-    subscribe
-   </div>
     </nav>
 </template>
 <style scoped>
-.primary-button{
-    background-color:var(--secondaryColor);
-    color:#fff;
-    padding:5px 20px;
-    width:fit-content;
-    border-radius:20px;
 
-}
 
 </style>
