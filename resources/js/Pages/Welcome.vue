@@ -9,6 +9,10 @@ import Navbar from "@/customComponenents/navbar.vue";
 </template>
 <style>
 /*here is all the variable that will be used globally in the project*/
+*{
+    margin:0;
+    padding: 0;
+}
 
 :root{
     --primaryColor:#FCE2E2;
@@ -16,12 +20,13 @@ import Navbar from "@/customComponenents/navbar.vue";
     --inputColor:#CFACAC;
     --mediumScreenMargin:3.75rem 0,7.5rem 7.5rem;
 }
+
 body{
     background-color: var(--primaryColor);
 }
-.mainSection{
+/* .mainSection{
     margin:3.75rem;
-}
+} */
 
 /* here is where all the code belonging the fonts of the website  */
 
