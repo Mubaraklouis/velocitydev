@@ -1,10 +1,13 @@
 <script setup lang="ts">
 
 import Navbar from "@/customComponenents/navbar.vue";
+import heroSection from "./heroSection.vue";
 </script>
 <template>
     <section class="mainSection">
         <navbar/>
+        <hero-section/>
+
     </section>
 </template>
 <style>

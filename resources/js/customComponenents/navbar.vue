@@ -2,16 +2,16 @@
 import primaryButton from './primary-button.vue';
 </script>
 <template>
-    <nav class="mobile-main-margins">
+    <nav class="m-10">
         <div class="flex justify-between">
             <div>
-          MALGA
+         <h1 class="text-3xl font-bold">MALGA</h1>
             </div>
 
 
             <div class="menu-mobile-visibility">
-        <ul class="flex text-bold gap-4 ">
-            <li class="text-extrabold">
+        <ul class="flex font-extrabold gap-4 ">
+            <li class="font-extrabold">
                 Home
             </li>
             <li>
@@ -29,19 +29,19 @@ import primaryButton from './primary-button.vue';
 <primaryButton title="Subscribe"/>
             </div>
 
-       <div class=" laptop-size flex  bg-[#0c093d] absolute  items-center w-full h-[50vh] top-20 left-0 text-white justify-center font-bold">
+       <div class="hidden laptop-size flex  bg-[#0c093d] absolute  items-center w-full h-[50vh] top-20 left-0 text-white justify-center font-bold">
         <ul class="grid grid-cols-1 gap-6 items-center">
-                <li>
+                <li class="text-bold">
                     Home
                 </li>
                 <li>
                     About
-                </li>   <li>
+                </li>   <li class="text-bold">
                 Contact
-            </li>   <li>
+            </li>   <li class="text-bold">
                 Features
             </li>
-                <li>
+                <li class="text-bold">
                     Pages
                 </li>
                 <div>
@@ -53,8 +53,6 @@ import primaryButton from './primary-button.vue';
        <div class="hand-menu">
         <img class="bars-size" src="/icons/bars.png" alt="">
        </div>
-
-
 
         </div>
 
@@ -87,10 +85,15 @@ display:none;
     height: 150px;
 }
 .bars-size{
-    width:50px;
-    height:50px;
+    width:20px;
+    height:20px;
 }
 .mobile-main-margins{
     margin:20px;
+}
+.logo-size{
+    width:35px;
+    height: 105px;
+
 }
 </style>
