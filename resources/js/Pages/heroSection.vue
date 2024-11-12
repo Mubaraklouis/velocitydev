@@ -1,113 +1,91 @@
 <script setup lang="ts">
+import Glow from '@/customComponenents/glow.vue';
 import PrimaryButton from '@/customComponenents/primary-button.vue';
 
 
 </script>
 
 <template>
+
+
 <section class="hero-section">
 
-<div>
-
-    <div  class="relative w-full flex justify-center">
-        <img class="absolute" src="/icons/Ellipse.png" alt="">
-
-    </div>
+    <div class="hero-section-wrapper">
 
 
+        <!-- this is the hero section text and header -->
 
-<div >
-    <svg width="296" height="384" viewBox="0 0 296 384" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_52_16)">
-<ellipse cx="69.8733" cy="191.607" rx="142.079" ry="111.542" fill="#363092"/>
-<path d="M52.0191 210.462C12.3878 197.741 11.8681 233.483 16.5622 252.944C16.5622 254.534 24.7097 259.804 57.2999 268.164C89.8901 276.524 93.3436 295.122 90.9966 303.376L116.646 252.944C111.617 244.084 91.6504 223.184 52.0191 210.462Z" fill="#C56A6A" stroke="#BE2626"/>
-<path d="M144.101 246.918C174.34 214.439 104.158 205.517 65.2865 205.116C62.1609 204.739 50.7256 210.788 29.9893 237.994C9.25289 265.199 -27.7577 263.891 -43.671 259.837L52.0668 294.738C70.1451 292.331 113.862 279.396 144.101 246.918Z" fill="#C56A6A" stroke="#C56A6A"/>
-<path d="M115.915 138.208C154.187 92.2137 67.3626 81.0983 19.1666 81.2899C15.2994 80.8244 0.974624 89.5028 -25.3867 127.941C-51.748 166.379 -97.6151 165.267 -117.253 159.906L0.646078 206.849C23.1227 203.133 77.6437 184.203 115.915 138.208Z" fill="#C56A6A" stroke="#BE2626"/>
-<path d="M189.16 244.021C208.354 210.213 169.205 205.027 147.231 206.659C145.486 206.449 138.627 213.049 125.15 241.129C111.672 269.208 90.8093 269.844 82.0627 266.652L134.011 296.282C144.397 292.948 169.967 277.83 189.16 244.021Z" fill="#363092" stroke="#BE2626"/>
-<path d="M90.0478 135.228C13.4234 117.375 12.4186 167.535 21.4943 194.846C21.4943 197.078 37.247 204.474 100.258 216.206C163.269 227.939 169.946 254.039 165.408 265.622L215 194.846C205.276 182.412 166.672 153.082 90.0478 135.228Z" fill="#511212"/>
-<path d="M90.0478 135.228C13.4234 117.375 12.4186 167.535 21.4943 194.846C21.4943 197.078 37.247 204.474 100.258 216.206C163.269 227.939 169.946 254.039 165.408 265.622L215 194.846C205.276 182.412 166.672 153.082 90.0478 135.228Z" fill="#511212"/>
-<path d="M90.0478 135.228C13.4234 117.375 12.4186 167.535 21.4943 194.846C21.4943 197.078 37.247 204.474 100.258 216.206C163.269 227.939 169.946 254.039 165.408 265.622L215 194.846C205.276 182.412 166.672 153.082 90.0478 135.228Z" fill="#D3CA75" fill-opacity="0.61"/>
-<path d="M90.0478 135.228C13.4234 117.375 12.4186 167.535 21.4943 194.846C21.4943 197.078 37.247 204.474 100.258 216.206C163.269 227.939 169.946 254.039 165.408 265.622L215 194.846C205.276 182.412 166.672 153.082 90.0478 135.228Z" stroke="#BE2626"/>
-</g>
-<defs>
-<filter id="filter0_f_52_16" x="-197.45" y="0.0655518" width="493.072" height="383.537" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_52_16"/>
-</filter>
-</defs>
-</svg>
-</div>
-
-
-</div>
-
-
-
-    <div class="ml-10 mr-10 mb-10">
-        <h1 class="font-extrabold text-3xl text-[#093228]">
+        <div class=" hero-section-text">
+            <h1 class="font-extrabold text-3xl text-[#093228] mt-10 mb-10">
             Design Your Dream
         </h1>
 
-        <div class="mt-10">
+        <div>
             <p class="hero-text">
                 Get custom T-shirts and Eye-catching flyers and More!
                 elevate your brand with custom Tees,Graphic Design and Trading solutions
             </p>
 
-            <div class="mt-5 mb-10">
+        </div>
+        <div class="mt-10">
               <PrimaryButton title="Explore More"/>
             </div>
-
         </div>
+
+        <div class=" hero-section-text">
+
+            <div>
+    <div>
+        <img src="/icons/Ellipse.png" alt="">
     </div>
-    <br>
-
-
-<div class="relative">
-
-
-<svg class="absolute right-0 z-10" width="314" height="200" viewBox="0 0 314 305" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_52_9)">
-<ellipse cx="267.873" cy="191.607" rx="142.079" ry="111.542" fill="#363092"/>
-<path d="M250.019 210.462C210.388 197.741 209.868 233.483 214.562 252.944C214.562 254.534 222.71 259.804 255.3 268.164C287.89 276.524 291.344 295.122 288.997 303.376L314.646 252.944C309.617 244.084 289.65 223.184 250.019 210.462Z" fill="#C56A6A" stroke="#BE2626"/>
-<path d="M342.101 246.918C372.34 214.439 302.158 205.517 263.286 205.116C260.161 204.739 248.726 210.788 227.989 237.994C207.253 265.199 170.242 263.891 154.329 259.837L250.067 294.738C268.145 292.331 311.862 279.396 342.101 246.918Z" fill="#C56A6A" stroke="#C56A6A"/>
-<path d="M313.915 138.208C352.187 92.2136 265.363 81.0982 217.167 81.2899C213.299 80.8243 198.975 89.5028 172.613 127.941C146.252 166.379 100.385 165.267 80.7466 159.906L198.646 206.849C221.123 203.133 275.644 184.203 313.915 138.208Z" fill="#C56A6A" stroke="#BE2626"/>
-<path d="M387.16 244.021C406.354 210.213 367.205 205.027 345.231 206.659C343.486 206.449 336.627 213.049 323.15 241.129C309.672 269.208 288.809 269.844 280.063 266.652L332.011 296.282C342.397 292.948 367.967 277.83 387.16 244.021Z" fill="#363092" stroke="#BE2626"/>
-<path d="M288.048 135.228C211.423 117.375 210.419 167.535 219.494 194.846C219.494 197.078 235.247 204.474 298.258 216.206C361.269 227.939 367.946 254.039 363.408 265.622L413 194.846C403.276 182.412 364.672 153.082 288.048 135.228Z" fill="#511212"/>
-<path d="M288.048 135.228C211.423 117.375 210.419 167.535 219.494 194.846C219.494 197.078 235.247 204.474 298.258 216.206C361.269 227.939 367.946 254.039 363.408 265.622L413 194.846C403.276 182.412 364.672 153.082 288.048 135.228Z" fill="#511212"/>
-<path d="M288.048 135.228C211.423 117.375 210.419 167.535 219.494 194.846C219.494 197.078 235.247 204.474 298.258 216.206C361.269 227.939 367.946 254.039 363.408 265.622L413 194.846C403.276 182.412 364.672 153.082 288.048 135.228Z" fill="#D3CA75" fill-opacity="0.61"/>
-<path d="M288.048 135.228C211.423 117.375 210.419 167.535 219.494 194.846C219.494 197.078 235.247 204.474 298.258 216.206C361.269 227.939 367.946 254.039 363.408 265.622L413 194.846C403.276 182.412 364.672 153.082 288.048 135.228Z" stroke="#BE2626"/>
-</g>
-<defs>
-<filter id="filter0_f_52_9" x="0.549622" y="0.0655212" width="493.072" height="383.537" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_52_9"/>
-</filter>
-</defs>
-</svg>
-
-
-
-
-
-
-<svg class="z-0" width="screen" height="196" viewBox="0 0 430 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M232.307 128.687C132.608 203.332 34.3958 74.5644 -2.24792 0.849976L-8 195.623L437.397 202.958L440.087 111.87C409.785 81.4477 325.805 42.2204 232.307 128.687Z" fill="#362F95" stroke="#BE2626"/>
-</svg>
-
 </div>
+        </div>
+
+    </div>
+
+
 </section>
 </template>
 
 <style scoped>
 
+.hero-section{
+    background-image: linear-gradient(180deg, #FCE2E2, 80%,#2E297D);
+}
 .hero-text{
     font-family: "Abel", sans-serif;
 }
-.hero-section{
-    background-image: linear-gradient(180deg, #FCE2E2, 80%,#2E297D);
+.hero-section-wrapper{
+
+    padding: 30px;
+
+}
+.glow{
+    z-index: 1;
+
+
+}
+
+
+
+/* Media query for laptop screens */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .hero-section-wrapper{
+     display: flex;
+     justify-content: space-between;
+
+
+}
+.hero-section-text{
+    width: 500px;
+}
+
+.hero-section-wrapper{
+    padding: 60px;
+
+}
+
 }
 
 </style>

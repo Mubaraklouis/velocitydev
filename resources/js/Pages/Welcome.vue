@@ -2,11 +2,13 @@
 
 import Navbar from "@/customComponenents/navbar.vue";
 import heroSection from "./heroSection.vue";
+import Services from "@/customComponenents/services.vue";
 </script>
 <template>
     <section class="mainSection">
         <navbar/>
         <hero-section/>
+        <Services/>
 
     </section>
 </template>
