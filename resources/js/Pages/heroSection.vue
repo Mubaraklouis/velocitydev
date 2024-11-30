@@ -10,7 +10,9 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
 
 <section class="hero-section">
 
+
     <div class="hero-section-wrapper">
+
 
 
         <!-- this is the hero section text and header -->
@@ -25,6 +27,8 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
                 Get custom T-shirts and Eye-catching flyers and More!
                 elevate your brand with custom Tees,Graphic Design and Trading solutions
             </p>
+
+        <Glow/>
 
         </div>
         <div class="mt-10">

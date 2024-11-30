@@ -3,12 +3,17 @@
 import Navbar from "@/customComponenents/navbar.vue";
 import heroSection from "./heroSection.vue";
 import Services from "@/customComponenents/services.vue";
+import Portfolio from "@/customComponenents/portfolio.vue";
+import Teams from "@/customComponenents/teams.vue";
 </script>
 <template>
     <section class="mainSection">
         <navbar/>
         <hero-section/>
         <Services/>
+
+        <Portfolio/>
+        <Teams/>
 
     </section>
 </template>
@@ -34,6 +39,7 @@ body{
 } */
 
 /* here is where all the code belonging the fonts of the website  */
+/* mobile margin  */
 
 
 

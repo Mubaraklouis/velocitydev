@@ -13,7 +13,7 @@ import cctv from './cctv.vue';
 
 </div> -->
 
-<div class="bg-[#2E297D]  m-4  text-white  p-4 service-card">
+<div class="bg-[#2E297D]    text-white  p-10 service-card">
     <div class="image-wrapper">
         <div class="service-image">
             <cctv/>
@@ -23,13 +23,13 @@ import cctv from './cctv.vue';
 
 </div>
 
-                <h1 class="mb-4 font-bold ">CCTV CAMERA INSTALLATION</h1>
+                <h1 class="mb-6 font-bold mt-6 ">CCTV CAMERA INSTALLATION</h1>
                 <div>
                     <p class="service-text">
                         We work with over 150 clients and install cctv cameras
                     </p>
-        <div class="flex gap-4">
-            <h1 class="mt-4 text-sm font-extrabold">Read More +</h1>
+        <div class="flex gap-4 mt-6">
+            <h1 class="mt-6 text-sm font-extrabold">Read More +</h1>
 
 
             <div class="flex gap-1 mt-4">
@@ -37,7 +37,7 @@ import cctv from './cctv.vue';
                 <star/>
                 <star/>
                 <star/>
-                <star/>
+
 
 
             </div>
@@ -69,6 +69,11 @@ import cctv from './cctv.vue';
 }
 .service-text{
     font-size:14px;
+    width:200px;
+}
+.service-card{
+    width:392px;
+height: 352px;
 }
 
 

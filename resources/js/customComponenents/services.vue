@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#363092] w-full h-fit mt-0">
+    <div class="bg-[#363092] w-full h-fit mt-0 pb-6">
         <h1 class="text-3xl font-bold text-center text-white">
             what we can do?
         </h1>
@@ -25,6 +25,7 @@ import Service from './service.vue';
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin:60px;
+
 }
 }
 
