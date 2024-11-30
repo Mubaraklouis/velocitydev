@@ -1,10 +1,14 @@
     <template>
+    <div>
+
         <h1 class="mt-4 text-4xl font-extrabold text-center my-10">
             Meet Our Team
         </h1>
+
+        <teamGlow/>
         <div class="ml-16  my-10">
 
-            <Glow/>
+
             <div class="team-wrapper">
                 <Team/>
                 <Team/>
@@ -15,10 +19,11 @@
         </div>
 
 
+    </div>
     </template>
 
     <script setup>
-import Glow from './glow.vue';
+import teamGlow from './team-glow.vue';
 import Team from './team.vue';
 
 
