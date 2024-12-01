@@ -13,6 +13,17 @@ import Teams from "@/customComponenents/teams.vue";
         <Services/>
 
         <Portfolio/>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
         <Teams/>
 
     </section>

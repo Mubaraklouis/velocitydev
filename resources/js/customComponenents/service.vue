@@ -6,12 +6,16 @@ import cctv from './cctv.vue';
 </script>
 
 <template>
-<div>
+<div class="relative">
 
 
 <!-- <div class="image-wrapper">
 
 </div> -->
+
+<div class="service-shadow  absolute z-0">
+
+</div>
 
 <div class="bg-[#2E297D]    text-white  p-10 service-card">
     <div class="image-wrapper">
@@ -74,6 +78,11 @@ import cctv from './cctv.vue';
 .service-card{
     width:392px;
 height: 352px;
+}
+.service-shadow{
+    width:392px;
+    height: 352px;
+    background-color: #C4C4C4;
 }
 
 

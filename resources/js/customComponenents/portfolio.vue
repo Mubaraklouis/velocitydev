@@ -1,6 +1,8 @@
 
 <script setup>
 import primaryButton from './primary-button.vue';
+import girlGlow from './girlGlow.vue';
+
 
 
 </script>
@@ -16,7 +18,7 @@ import primaryButton from './primary-button.vue';
 
         <h1 class="mt-10 mb-10 text-xl font-extrabold">CCTV Camera Installation for cleints</h1>
         <div>
-            
+
             <p class="mt-10 mb-10">
                 We worked with over 150 businesses and institution <br> to install  CCTV cameras across <br> South Sudan
             </p>
@@ -36,12 +38,18 @@ import primaryButton from './primary-button.vue';
     </div>
     <div class="portfolio-wrapper">
 
-        <div class="m-10 portfolio-image">
-        <img class="girl-image" src="girl-image.png" alt="">
+     <section>
+        <div class="m-10 mt-10 mb-10 portfolio-image relative">
+            <girlGlow class="absolute z-0 button-20 right-20"/>
+
+        <img class="girl-image z-10 absolute top-7" src="girl-image.png" alt="">
 
     </div>
+     </section>
 
-        <div class="mt-10 ml-20 mr-20 portfolio-text">
+<section>
+
+    <div class="mt-10 ml-20 mr-20 portfolio-text">
         <h1 class="mt-10 mb-10 text-xl font-extrabold">We exclusively design modern ux </h1>
         <div>
             <p class="mt-10 mb-10">
@@ -54,6 +62,7 @@ import primaryButton from './primary-button.vue';
 
         </div>
     </div>
+</section>
     </div>
 
 
@@ -67,6 +76,8 @@ import primaryButton from './primary-button.vue';
 /* Media query for laptop screens */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     .portfolio-wrapper{
+        margin-top: 20px;
+        margin-bottom: 20px;
         display:grid;
         grid-template-columns: 1fr 1fr;
     }
