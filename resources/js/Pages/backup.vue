@@ -50,3 +50,18 @@
 <path d="M232.307 128.687C132.608 203.332 34.3958 74.5644 -2.24792 0.849976L-8 195.623L437.397 202.958L440.087 111.87C409.785 81.4477 325.805 42.2204 232.307 128.687Z" fill="#362F95"/>
 </svg>
 </div>
+
+
+<style>
+
+.service-wrapper{
+    margin-left: 7.64%;
+    margin-right: 7.64%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:60px; */
+    width: screen;
+
+}
+
+</style>

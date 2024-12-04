@@ -1,21 +1,21 @@
 <template>
-    <div class="bg-[#363092]">
-        <h1 class="text-3xl font-bold text-center text-white">
+    <div class="bg-[#363092] py-10">
+        <h1 class="text-3xl font-bold text-center text-white my-10">
             what we can do?
         </h1>
 
-        <div class="service-wrapper">
-
-
+        <div class="services-wrapper">
             <Service/>
-            <!-- <Service/>
-            <Service/> -->
+            <firstService/>
+            <secondService/>
         </div>
 
     </div>
 </template>
 <script setup>
 import Service from './service.vue';
+import firstService from '@/Components/services/firstService.vue';
+import secondService from '@/Components/services/secondService.vue';
 
 
 </script>
@@ -23,34 +23,17 @@ import Service from './service.vue';
 <style scoped>
 /* Media query for laptop screens */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-.service-wrapper{
-    margin-left: 7.64%;
-    margin-right: 7.64%;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin:60px; */
+.services-wrapper{
+
+
     width: screen;
-
-    border: 2px solid red;
-
-}
-
-.testing{
-    display :grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:59px;
+    margin-left: 91px;
+    margin-right:91px;
 
 
-.service-shadow{
-    grid-area: 1/1;
-    width:392px;
-    height: 352px;
-    background-color: #C4C4C4;
-}
-
-.testing2{
-    grid-area:1/1;
 
 }
 }

@@ -26,10 +26,17 @@ console.log(width);
 
     <div class="service-card">
       <div class="p-5">
-        <h1>CCTV CAMERA INSTALLATION</h1>
-        <p class="mt-5">We work with over 150 cleints and install cctv cameras</p>
-        <div class="mt-5">
-            <h1>Read more +</h1>
+        <h1>T-SHIRT PRINTING</h1>
+        <p class="mt-5">Elevate your brand with custom tees talered to your brand</p>
+        <div class="mt-5 star-wrapper">
+            <h4>Read more +</h4>
+            <div class="flex gap-1">
+                <img class="star" src="/icons/star.png" alt="">
+                <img class="star" src="/icons/star.png" alt="">
+                <img class="star" src="/icons/star.png" alt="">
+                <img class="star" src="/icons/star.png" alt="">
+
+            </div>
         </div>
       </div>
     </div>
@@ -67,7 +74,7 @@ console.log(width);
 
 .service-card{
 background: #2E297D;
-width:95%;
+width:100%;
 height: 250px;
 position: absolute;
 z-index: 1;
@@ -78,14 +85,30 @@ padding-top:50px ;
 
 }
 
-.service-card div h1{
+.service-card div h1,h4{
     font-weight: 1000;
+    color: white;
+}
+.service-card div h4{
+    font-size: 12px;
     color: white;
 }
 .service-card div p{
     font-size: 15px;
-
+  font-weight: lighter;
     color: white;
+}
+
+
+.star{
+    width: 10px;
+    height: 10px;
+    margin-top:5px;
+}
+.star-wrapper{
+    display: flex;
+    gap: 30px;
+
 }
 
 .service-shadow{
@@ -101,11 +124,8 @@ padding-top:50px ;
 
 .service-card-wrapper{
     position: relative;
-    width: 27.64%;
     height: 300px;
-    border: 3px solid yellow;
     padding: 5px;
-
 }
 
 .service-image-holder{
