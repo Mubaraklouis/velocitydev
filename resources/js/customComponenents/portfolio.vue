@@ -3,6 +3,8 @@
 import primaryButton from './primary-button.vue';
 import girlGlow from './girlGlow.vue';
 import teamGlow from './team-glow.vue';
+import Leftglow from '@/Components/leftglow.vue';
+import Rightglow from './rightglow.vue';
 
 
 </script>
@@ -13,7 +15,10 @@ import teamGlow from './team-glow.vue';
 
     <div>
         <div>
-            <teamGlow/>
+
+            <Leftglow/>
+
+            <Rightglow/>
 
 
         </div>
