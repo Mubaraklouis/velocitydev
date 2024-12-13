@@ -14,11 +14,13 @@ import Rightglow from './rightglow.vue';
     <h1 class="mt-10 mb-10 text-4xl font-extrabold text-center text-extrabold">Our portfolio</h1>
 
     <div>
-        <div>
+        <div class="portfolio-wrapper">
 
-            <Leftglow/>
 
-            <Rightglow/>
+                <Leftglow class="glow-left"/>
+
+
+            <Rightglow class="glow-right"/>
 
 
         </div>
@@ -33,6 +35,22 @@ import Rightglow from './rightglow.vue';
 </template>
 
 <style scoped>
+
+.portfolio-wrapper{
+    position: relative;
+
+}
+.glow-left{
+    position: absolute;
+
+}
+.glow-right{
+    position: absolute;
+    right: 0;
+
+
+
+}
 
 
 
