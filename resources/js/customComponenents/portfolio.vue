@@ -2,7 +2,7 @@
 <script setup>
 import primaryButton from './primary-button.vue';
 import girlGlow from './girlGlow.vue';
-
+import teamGlow from './team-glow.vue';
 
 
 </script>
@@ -13,6 +13,8 @@ import girlGlow from './girlGlow.vue';
 
     <div>
         <div>
+            <teamGlow/>
+
 
         </div>
 
