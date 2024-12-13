@@ -19,25 +19,26 @@ import Service from './service.vue';
 import firstService from '@/Components/services/firstService.vue';
 import secondService from '@/Components/services/secondService.vue';
 
-//get the width of the laptop screen
-
-const screenSize = window.innerWidth;
-
-alert(screenSize)
-
-
-
-
 
 </script>
 
 <style scoped>
+
+/* this is the general size of the application */
+.services-wrapper{
+width: screen;
+margin: 24px;
+
+
+}
+
+
 /* Media query for laptop medium size  screens */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
 .services-wrapper{
 
 
-    width: 100%;
+    width: screen;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:59px;
@@ -45,8 +46,6 @@ alert(screenSize)
     margin-right:91px;
 
 }
-
-
 }
 
 /* Media querry for large size laptop screen */
@@ -55,7 +54,7 @@ alert(screenSize)
 .services-wrapper{
 
 
-width: 100%;
+width: screen;
 display:grid;
 grid-template-columns: 1fr 1fr 1fr;
 gap:59px;
@@ -68,6 +67,19 @@ margin-right:91px;
 
 
 /* media query for tablet size and large mobile phones */
+@media screen and (min-width:800px) and (max-width:1023px){
+
+.services-wrapper{
+width: screen;
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap:59px;
+margin-left: 91px;
+margin-right:91px;
+
+}
+
+}
 
 
 

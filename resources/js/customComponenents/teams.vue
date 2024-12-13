@@ -34,22 +34,7 @@ import Team from './team.vue';
 <style>
 
 
-.team-wrapper{
-    display:grid;
-grid-template-columns: 1fr 1fr 1fr;
-}
 
-/* making the site reponsive for mobile size */
-
-@media (max-width: 768px) {
-.team-wrapper{
-    display:grid;
-
-
-}
-
-
-}
 
 
 </style>
