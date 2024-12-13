@@ -20,7 +20,14 @@ import Rightglow from './rightglow.vue';
                 <Leftglow class="glow-left"/>
 
 
-            <Rightglow class="glow-right"/>
+                <Rightglow class="glow-right"/>
+
+                <section class="portfolio-content">
+                    hello am portfolioa
+
+
+
+                </section>
 
 
         </div>
@@ -38,16 +45,36 @@ import Rightglow from './rightglow.vue';
 
 .portfolio-wrapper{
     position: relative;
+    border: 3px solid red;
+    height: 500px;
 
 }
 .glow-left{
     position: absolute;
+    z-index: 0;
 
 }
 .glow-right{
     position: absolute;
     right: 0;
+    z-index: 0;
 
+
+
+}
+.portfolio-content{
+    border: 4px solid blue;
+    background-color: red;
+
+
+
+
+    height: 100%;
+    width: 1500px;
+    z-index: 1;
+    position: absolute;
+    margin-left: 91px;
+    margin-right: 91px;
 
 
 }
