@@ -8,7 +8,6 @@ import cctv from './cctv.vue';
 
 const width = window.innerWidth;
 
-console.log(width);
 
 </script>
 
@@ -129,8 +128,8 @@ padding-top:50px ;
 }
 
 .service-image-holder{
-    width: 30%;
-    height: 30%;
+    width: 100px;
+    height: 100px;
     background-color: #231F60;
     border-radius: 50%;
     position: absolute;
