@@ -12,7 +12,7 @@
         <div>
             <h1 class="font-extrabold my-4 text-md text-center">MUBARAK KUAL LOUIS</h1>
             <p class="font-abel font-extraligth">
-                senour software Engineer with 5 years expierince and UI/UX designer
+                senoir software Engineer with 5 years expierince and UI/UX designer
             </p>
 
             <h1 class="font-extrabold my-4">Read more +</h1>
