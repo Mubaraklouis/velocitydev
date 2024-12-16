@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="bg-[#363092] py-10">
         <h1 class="text-3xl font-bold text-center text-white my-10">
@@ -7,86 +5,58 @@
         </h1>
 
         <div class="services-wrapper">
-            <Service/>
-            <firstService/>
-            <secondService/>
+            <Service />
+            <firstService />
+            <secondService />
         </div>
-
     </div>
 </template>
 <script setup>
-import Service from './service.vue';
-import firstService from '@/Components/services/firstService.vue';
-import secondService from '@/Components/services/secondService.vue';
-
-
-
+import Service from "./service.vue";
+import firstService from "@/Components/services/firstService.vue";
+import secondService from "@/Components/services/secondService.vue";
 </script>
 
 <style scoped>
-
 /* this is the general size of the application */
-.services-wrapper{
-width: screen;
-margin: 24px;
-
-
+.services-wrapper {
+    width: screen;
+    margin: 24px;
 }
-
 
 /* Media query for laptop medium size  screens */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-.services-wrapper{
-
-
-    width: screen;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:59px;
-    margin-left: 91px;
-    margin-right:91px;
-
-}
+    .services-wrapper {
+        width: screen;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 59px;
+        margin-left: 91px;
+        margin-right: 91px;
+    }
 }
 
 /* Media querry for large size laptop screen */
-@media screen and (min-width:1441px) and (max-width:1920px){
-
-.services-wrapper{
-
-
-width: screen;
-display:grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap:59px;
-margin-left: 91px;
-margin-right:91px;
-
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .services-wrapper {
+        width: screen;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 59px;
+        margin-left: 91px;
+        margin-right: 91px;
+    }
 }
-
-}
-
 
 /* media query for tablet size and large mobile phones */
-@media screen and (min-width:800px) and (max-width:1023px){
-
-.services-wrapper{
-width: screen;
-display:grid;
-grid-template-columns: 1fr 1fr;
-gap:59px;
-margin-left: 91px;
-margin-right:91px;
-
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+    .services-wrapper {
+        width: screen;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 59px;
+        margin-left: 91px;
+        margin-right: 91px;
+    }
 }
-
-}
-
-
-
-
-
-
 </style>
-
-

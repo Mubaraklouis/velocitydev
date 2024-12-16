@@ -1,73 +1,69 @@
-
 <script setup>
-import primaryButton from './primary-button.vue';
-import girlGlow from './girlGlow.vue';
-import teamGlow from './team-glow.vue';
-import Leftglow from '@/Components/leftglow.vue';
-import Rightglow from './rightglow.vue';
-
-
+import primaryButton from "./primary-button.vue";
+import girlGlow from "./girlGlow.vue";
+import teamGlow from "./team-glow.vue";
+import Leftglow from "@/Components/leftglow.vue";
+import Rightglow from "./rightglow.vue";
 </script>
 <template>
-  <section>
+    <section>
+        <h1
+            class="mt-10 mb-10 text-4xl font-extrabold text-center text-extrabold"
+        >
+            Our portfolio
+        </h1>
 
-    <h1 class="mt-10 mb-10 text-4xl font-extrabold text-center text-extrabold">Our portfolio</h1>
-
-    <div>
-        <div class="portfolio-wrapper">
-
-
-                <Leftglow class="glow-left"/>
-
-
-                <Rightglow class="glow-right"/>
-
+        <div>
+            <div class="portfolio-wrapper">
+                <Leftglow class="glow-left" />
+                <Rightglow class="glow-right" />
                 <section class="portfolio-content">
-                    hello am portfolioa
+                    <div class="mt-10 ml-20 mr-20 portfolio-text">
+                        <h1 class="mt-10 mb-10 text-xl font-extrabold">
+                            CCTV Camera Installation for cleints
+                        </h1>
+                        <div>
+                            <p class="mt-10 mb-10">
+                                We worked with over 150 businesses and
+                                institution <br />
+                                to install CCTV cameras across <br />
+                                South Sudan
+                            </p>
+                            <primaryButton title="subscribe" />
+                        </div>
+                    </div>
 
-
-
+                    <div class="m-10">
+                        <img
+                            class="portfolio-image"
+                            src="portfolio-image.png"
+                            alt=""
+                        />
+                    </div>
                 </section>
-
-
+            </div>
         </div>
-
-    </div>
-
-
-
-
-  </section>
-
+    </section>
 </template>
 
 <style scoped>
-
-.portfolio-wrapper{
+.portfolio-wrapper {
     position: relative;
-    border: 3px solid red;
+    /* border: 3px solid red; */
     height: 500px;
-
 }
-.glow-left{
+.glow-left {
     position: absolute;
     z-index: 0;
-
 }
-.glow-right{
+.glow-right {
     position: absolute;
     right: 0;
     z-index: 0;
-
-
-
 }
-.portfolio-content{
-    border: 4px solid blue;
-    background-color: red;
-
-
-
+.portfolio-content {
+    /* border: 4px solid blue;
+    background-color: red; */
 
     height: 100%;
     width: 1500px;
@@ -76,9 +72,11 @@ import Rightglow from './rightglow.vue';
     margin-left: 91px;
     margin-right: 91px;
 
-
+    display: flex;
+    justify-content: space-between;
 }
-
-
-
+.portfolio-image {
+    object-fit: cover;
+    width: 500px;
+}
 </style>
