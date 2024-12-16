@@ -1,7 +1,5 @@
 <script setup>
 import primaryButton from "./primary-button.vue";
-import girlGlow from "./girlGlow.vue";
-import teamGlow from "./team-glow.vue";
 import Leftglow from "@/Components/leftglow.vue";
 import Rightglow from "./rightglow.vue";
 </script>
@@ -79,4 +77,10 @@ import Rightglow from "./rightglow.vue";
     object-fit: cover;
     width: 500px;
 }
+
+/* media query for small size device such as mobile*/
+
+@media screen and (min-width:)
+
+
 </style>
