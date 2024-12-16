@@ -11,10 +11,13 @@ import Rightglow from "./rightglow.vue";
             Our portfolio
         </h1>
 
-        <div>
+        <div class="debug">
             <div class="portfolio-wrapper">
+                <!-- this is the left glowing object -->
                 <Leftglow class="glow-left" />
+                <!-- this is the right glowing design -->
                 <Rightglow class="glow-right" />
+                <!-- this is the main content of the postfolio -->
                 <section class="portfolio-content">
                     <div class="mt-10 ml-20 mr-20 portfolio-text">
                         <h1 class="mt-10 mb-10 text-xl font-extrabold">
@@ -27,7 +30,7 @@ import Rightglow from "./rightglow.vue";
                                 to install CCTV cameras across <br />
                                 South Sudan
                             </p>
-                            <primaryButton title="subscribe" />
+                            <primaryButton title="Read more" />
                         </div>
                     </div>
 
@@ -44,17 +47,24 @@ import Rightglow from "./rightglow.vue";
     </section>
 </template>
 
-<style scoped>
+<style>
+.debug{
+    border: 3px solid green;
+    height: max-content;
+
+}
 .portfolio-wrapper {
-    position: relative;
-    /* border: 3px solid red; */
-    height: 500px;
+    /* position: relative; */
+    border: 3px solid yellow;
+    height: fit-content;
+
 }
 
 .portfolio-content {
 
     z-index: 1;
-    position: absolute;
+    /* position: absolute; */
+    border: 3px solid red;
 
 }
 .glow-left {

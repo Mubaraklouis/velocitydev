@@ -5,20 +5,24 @@ import heroSection from "./heroSection.vue";
 import Services from "@/customComponenents/services.vue";
 import Portfolio from "@/customComponenents/portfolio.vue";
 import Teams from "@/customComponenents/teams.vue";
+import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
 </script>
 <template>
     <section class="mainSection">
-        <navbar/>
-        <hero-section/>
+        <!-- <navbar/>
+        <hero-section/> -->
         <Services/>
-
-        <Portfolio/>
         <Portfolio/>
 
 
-        <Teams/>
+
+
+
+
+
 
     </section>
+    
 </template>
 <style>
 /*here is all the variable that will be used globally in the project*/
