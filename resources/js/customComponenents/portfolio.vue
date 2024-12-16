@@ -31,7 +31,7 @@ import Rightglow from "./rightglow.vue";
                         </div>
                     </div>
 
-                    <div class="m-10">
+                    <div class="m-20">
                         <img
                             class="portfolio-image"
                             src="portfolio-image.png"
@@ -88,14 +88,14 @@ import Rightglow from "./rightglow.vue";
 
     display: flex;
     justify-content: space-between;
-}
 
 }
 
-@media screen and (min-width:1020px) and (max-width:144px){
+}
+
+@media screen and (min-width:1020px) and (max-width:1440px){
     .portfolio-content {
-    /* border: 4px solid blue;
-    background-color: red; */
+
 
     height: 100%;
     width: screen;
