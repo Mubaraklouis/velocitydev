@@ -50,6 +50,13 @@ import Rightglow from "./rightglow.vue";
     /* border: 3px solid red; */
     height: 500px;
 }
+
+.portfolio-content {
+
+    z-index: 1;
+    position: absolute;
+
+}
 .glow-left {
     position: absolute;
     z-index: 0;
@@ -59,7 +66,16 @@ import Rightglow from "./rightglow.vue";
     right: 0;
     z-index: 0;
 }
-.portfolio-content {
+
+.portfolio-image {
+    object-fit: cover;
+    width: 500px;
+}
+
+/* media query for large size device such as large laptops */
+
+@media screen and (min-width:1441px) and (max-width:1920px){
+    .portfolio-content {
     /* border: 4px solid blue;
     background-color: red; */
 
@@ -73,14 +89,40 @@ import Rightglow from "./rightglow.vue";
     display: flex;
     justify-content: space-between;
 }
-.portfolio-image {
-    object-fit: cover;
-    width: 500px;
+
 }
 
-/* media query for small size device such as mobile*/
+@media screen and (min-width:1020px) and (max-width:144px){
+    .portfolio-content {
+    /* border: 4px solid blue;
+    background-color: red; */
 
-@media screen and (min-width:)
+    height: 100%;
+    width: screen;
+    z-index: 1;
+    position: absolute;
+    margin-left: 91px;
+    margin-right: 91px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+}
+
+@media screen and (min-width:800px) and (max-width:1023px){
+    .portfolio-content {
+    height: 100%;
+    width: screen;
+    z-index: 1;
+    position: absolute;
+    margin-left: 91px;
+    margin-right: 91px;
+
+
+}
+
+}
 
 
 </style>
