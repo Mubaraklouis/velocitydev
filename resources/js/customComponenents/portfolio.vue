@@ -54,7 +54,7 @@ import Rightglow from "./rightglow.vue";
 
 }
 .portfolio-wrapper {
-    /* position: relative; */
+    position: relative;
     border: 3px solid yellow;
     height: fit-content;
 
@@ -89,10 +89,10 @@ import Rightglow from "./rightglow.vue";
     /* border: 4px solid blue;
     background-color: red; */
 
-    height: 100%;
+    /* height: fit-content; */
     width: 1500px;
     z-index: 1;
-    position: absolute;
+    /* position: absolute; */
     margin-left: 91px;
     margin-right: 91px;
 
@@ -106,11 +106,11 @@ import Rightglow from "./rightglow.vue";
 @media screen and (min-width:1020px) and (max-width:1440px){
     .portfolio-content {
 
-
-    height: 100%;
+/*
+    height: fit-content; */
     width: screen;
     z-index: 1;
-    position: absolute;
+    /* position: absolute; */
     margin-left: 91px;
     margin-right: 91px;
 
@@ -120,7 +120,7 @@ import Rightglow from "./rightglow.vue";
 
 }
 
-@media screen and (min-width:800px) and (max-width:1023px){
+/* @media screen and (min-width:800px) and (max-width:1023px){
     .portfolio-content {
     height: 100%;
     width: screen;
@@ -132,7 +132,7 @@ import Rightglow from "./rightglow.vue";
 
 }
 
-}
+} */
 
 
 </style>

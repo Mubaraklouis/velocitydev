@@ -13,16 +13,16 @@ import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
         <hero-section/> -->
         <Services/>
         <Portfolio/>
+        <Portfolio/>
+        <Services/>
+        <Services/>
 
-
-
-
-
-
-
+        <div>
+            am trying to see contribution on the graph here
+        </div>
 
     </section>
-    
+
 </template>
 <style>
 /*here is all the variable that will be used globally in the project*/
