@@ -19,7 +19,7 @@ import Rightglow from "./rightglow.vue";
 
                 <!-- this is the main content of the postfolio -->
                 <section class="portfolio-content">
-                    <div class="mt-10 ml-20 mr-20 portfolio-text">
+                    <div class="mt-10  portfolio-text">
                         <h1 class="mt-10 mb-10 text-xl font-extrabold">
                             CCTV Camera Installation for cleints
                         </h1>
@@ -34,7 +34,7 @@ import Rightglow from "./rightglow.vue";
                         </div>
                     </div>
 
-                    <div class="m-20">
+                    <div class="mt-10">
                         <img
                             class="portfolio-image"
                             src="portfolio-image.png"
@@ -48,6 +48,9 @@ import Rightglow from "./rightglow.vue";
 </template>
 
 <style>
+.glow-left{
+    visibility: hidden;
+}
 .portfolio-wrapper {
     position: relative;
     /* border: 3px solid yellow; */
@@ -57,7 +60,10 @@ import Rightglow from "./rightglow.vue";
 
 .portfolio-content {
 
+
     z-index: 1;
+    margin: 16px;
+    padding-top: 32px;
     /* position: absolute; */
     /* border: 3px solid red; */
 

@@ -1,7 +1,24 @@
 <script setup></script>
 
 <template>
-    <section class="portfolio2-wrapper"</section>
+    <section class="portfolio2-wrapper">
+
+        <!-- this is the image of portfolio section two -->
+
+        <div class="portfolio2-image">
+
+        </div>
+
+        <!-- this is the text discription of portfolio section two -->
+         <div class="portfolio2-discription">
+
+         </div>
+
+        <div>
+
+        </div>
+
+    </section>
 </template>
 
 <style scoped>
@@ -11,9 +28,20 @@
 .portfolio2-wrapper {
         width: screen;
         border:  2px solid green;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .portfolio2-image{
+        border: 3px solid yellow;
         height: 500px;
-        margin-left: 91px;
-        margin-right: 91px;
+
+    }
+
+    .portfolio2-discription{
+        border: 3px solid red;
+        height: 500px;
+
     }
 /* media querry for large devices such as large laptops */
 
@@ -21,7 +49,7 @@
     .portfolio2-wrapper {
         width: screen;
         border:  2px solid green;
-        height: 500px;
+        height: fit-content;
         margin-left: 91px;
         margin-right: 91px;
     }
@@ -32,7 +60,7 @@
     .portfolio2-wrapper {
         width: screen;
         border:  2px solid green;
-        height: 500px;
+        height: fit-content;
         margin-left: 91px;
         margin-right: 91px;
     }
@@ -42,7 +70,7 @@
     .portfolio2-wrapper {
         width: screen;
         border:  2px solid green;
-        height: 500px;
+        height: fit-content;
         margin-left: 91px;
         margin-right: 91px;
     }
