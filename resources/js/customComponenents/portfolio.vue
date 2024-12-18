@@ -98,6 +98,7 @@ import Rightglow from "./rightglow.vue";
 
 }
 
+ /* media querry for medium size devices  */
 @media screen and (min-width:1020px) and (max-width:1440px){
     .portfolio-content {
 

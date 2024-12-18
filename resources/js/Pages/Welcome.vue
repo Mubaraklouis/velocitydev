@@ -13,12 +13,9 @@ import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
         <hero-section/> -->
         <Services/>
         <Portfolio/>
-      
+        <portfolio2/>
 
 
-        <div>
-            am trying to see contribution on the graph here
-        </div>
 
     </section>
 
