@@ -5,18 +5,16 @@
 
         <!-- this is the image of portfolio section two -->
 
-        <div class="portfolio2-image">
+        <div class="portfolio2-image mt-10">
+            
 
         </div>
 
         <!-- this is the text discription of portfolio section two -->
-         <div class="portfolio2-discription">
+         <div class="portfolio2-discription mt-10 mb-10">
 
          </div>
 
-        <div>
-
-        </div>
 
     </section>
 </template>
@@ -26,10 +24,12 @@
 /* Default design for all small devices */
 
 .portfolio2-wrapper {
+
         width: screen;
         border:  2px solid green;
         margin-left: 16px;
         margin-right: 16px;
+
     }
 
     .portfolio2-image{
@@ -47,25 +47,33 @@
 
 @media screen and (min-width: 1441px) and (max-width:1920px) {
     .portfolio2-wrapper {
+        display: flex;
         width: screen;
         border:  2px solid green;
         height: fit-content;
         margin-left: 91px;
         margin-right: 91px;
+        gap: 30px;
+    }
+
+    .portfolio2-image{
+        border: 3px solid yellow;
+        height: 500px;
+        width: 100%;
+
+
+    }
+
+    .portfolio2-discription{
+        border: 3px solid red;
+        width: 100%;
+        height: 500px;
+
     }
 
 }
 
-@media screen and (min-width: 1441px) and (max-width:1920px) {
-    .portfolio2-wrapper {
-        width: screen;
-        border:  2px solid green;
-        height: fit-content;
-        margin-left: 91px;
-        margin-right: 91px;
-    }
 
-}
 @media screen and (min-width: 1020px) and (max-width:1440px) {
     .portfolio2-wrapper {
         width: screen;
