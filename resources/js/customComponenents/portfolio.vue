@@ -94,8 +94,8 @@ import Rightglow from "./rightglow.vue";
     width: screen;
     z-index: 1;
     /* position: absolute; */
-    margin-left: 91px;
-    margin-right: 91px;
+    margin-left: 100px;
+    margin-right: 100px;
     gap: 30px;
 
     display: flex;

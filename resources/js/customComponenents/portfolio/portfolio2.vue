@@ -58,8 +58,8 @@ import primaryButton from '../primary-button.vue';
         width: screen;
         /* border: 2px solid green; */
         height: fit-content;
-        margin-left: 91px;
-        margin-right: 91px;
+        margin-left: 100px;
+        margin-right: 100px;
         gap: 30px;
     }
 
