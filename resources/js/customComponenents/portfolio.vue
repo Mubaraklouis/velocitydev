@@ -16,7 +16,7 @@ import Rightglow from "./rightglow.vue";
                 <!-- this is the left glowing object -->
                 <Leftglow class="glow-left" />
                 <!-- this is the right glowing design -->
-                <Rightglow class="glow-right" />
+
                 <!-- this is the main content of the postfolio -->
                 <section class="portfolio-content">
                     <div class="mt-10 ml-20 mr-20 portfolio-text">
@@ -48,14 +48,9 @@ import Rightglow from "./rightglow.vue";
 </template>
 
 <style>
-.debug{
-    border: 3px solid green;
-    height: max-content;
-
-}
 .portfolio-wrapper {
     position: relative;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     height: fit-content;
 
 }
@@ -64,7 +59,7 @@ import Rightglow from "./rightglow.vue";
 
     z-index: 1;
     /* position: absolute; */
-    border: 3px solid red;
+    /* border: 3px solid red; */
 
 }
 .glow-left {
