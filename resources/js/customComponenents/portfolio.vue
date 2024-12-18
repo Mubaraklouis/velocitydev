@@ -34,9 +34,9 @@ import Rightglow from "./rightglow.vue";
                         </div>
                     </div>
 
-                    <div class="mt-10">
+                    <div class="mt-10  portfolio-image">
                         <img
-                            class="portfolio-image"
+
                             src="portfolio-image.png"
                             alt=""
                         />
@@ -80,27 +80,43 @@ import Rightglow from "./rightglow.vue";
 
 .portfolio-image {
     object-fit: cover;
-    width: 500px;
+    width: 100%;
 }
 
 /* media query for large size device such as large laptops */
 
 @media screen and (min-width:1441px) and (max-width:1920px){
     .portfolio-content {
-    /* border: 4px solid blue;
-    background-color: red; */
+    /* border: 4px solid blue; */
+
 
     /* height: fit-content; */
-    width: 1500px;
+    width: screen;
     z-index: 1;
     /* position: absolute; */
     margin-left: 91px;
     margin-right: 91px;
+    gap: 30px;
 
     display: flex;
-    justify-content: space-between;
+
+    /* justify-content: space-between; */
 
 }
+
+
+.portfolio-image{
+    /* border: 3px solid red; */
+    width: 100%;
+
+}
+.portfolio-text{
+    /* border: 3px solid; */
+    width: 100%;
+}
+
+
+
 
 }
 
@@ -118,6 +134,16 @@ import Rightglow from "./rightglow.vue";
 
     display: flex;
     justify-content: space-between;
+}
+
+.portfolio-image{
+    border: 3px solid red;
+    width: screen;
+
+}
+.portfolio-text{
+    border: 3px solid;
+    width: screen;
 }
 
 }

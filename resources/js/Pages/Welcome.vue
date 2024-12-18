@@ -12,9 +12,12 @@ import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
         <!-- <navbar/>
         <hero-section/> -->
         <Services/>
-        <Portfolio/>
+
+        <div class="grid grid-cols-1 justify-center">
+            <Portfolio/>
         <portfolio2/>
 
+        </div>
 
 
     </section>
