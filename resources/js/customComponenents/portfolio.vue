@@ -116,51 +116,73 @@ import Rightglow from "./rightglow.vue";
 }
 
 
-
-
 }
 
  /* media querry for medium size devices  */
 @media screen and (min-width:1020px) and (max-width:1440px){
     .portfolio-content {
+    /* border: 4px solid blue; */
 
-/*
-    height: fit-content; */
+
+    /* height: fit-content; */
     width: screen;
     z-index: 1;
     /* position: absolute; */
-    margin-left: 91px;
-    margin-right: 91px;
+    margin-left: 100px;
+    /* margin-right: 100px; */
+    gap: 30px;
 
     display: flex;
+
     justify-content: space-between;
+
 }
 
+
 .portfolio-image{
-    border: 3px solid red;
-    width: screen;
+    /* border: 3px solid red; */
+    width: 100%;
 
 }
 .portfolio-text{
-    border: 3px solid;
-    width: screen;
+    /* border: 3px solid; */
+    width: 100%;
 }
+
 
 }
 
-/* @media screen and (min-width:800px) and (max-width:1023px){
+@media screen and (min-width:800px) and (max-width:1023px){
     .portfolio-content {
-    height: 100%;
+    /* border: 4px solid blue; */
+
+
+    /* height: fit-content; */
     width: screen;
     z-index: 1;
-    position: absolute;
-    margin-left: 91px;
-    margin-right: 91px;
+    /* position: absolute; */
+    margin-left: 100px;
+    /* margin-right: 100px; */
+    gap: 30px;
 
+    display: flex;
+
+    justify-content: space-between;
 
 }
 
-} */
+
+.portfolio-image{
+    /* border: 3px solid red; */
+    width: 100%;
+
+}
+.portfolio-text{
+    /* border: 3px solid; */
+    width: 100%;
+}
+
+}
 
 
 </style>

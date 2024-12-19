@@ -9,7 +9,7 @@ import primaryButton from '../primary-button.vue';
 
         <div class="portfolio2-image mt-10">
             <!-- <img  src="girl-glow.png" alt=""> -->
-            <img class="girl-image" src="girl-image.png" alt="" />
+            <img class="girl-image" src="ux.png" alt="" />
         </div>
 
         <!-- this is the text discription of portfolio section two -->
@@ -78,18 +78,74 @@ import primaryButton from '../primary-button.vue';
 
     .girl-image{
         width: 400px;
-        height: 400px;
+        height: 250px;
         object-fit: cover;
+        border-radius: 15px;
     }
 }
 
 @media screen and (min-width: 1020px) and (max-width: 1440px) {
     .portfolio2-wrapper {
+        display: flex;
         width: screen;
         /* border: 2px solid green; */
         height: fit-content;
-        margin-left: 91px;
-        margin-right: 91px;
+        margin-left: 100px;
+        /* margin-right: 100px; */
+        gap: 30px;
     }
+
+    .portfolio2-image {
+        position: relative;
+        /* border: 3px solid yellow; */
+        height: fit-content;
+        width: 100%;
+    }
+
+    .portfolio2-discription {
+        /* border: 3px solid red; */
+        width: 100%;
+        height: fit-content;
+    }
+
+    .girl-image{
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1023px){
+    .portfolio2-wrapper {
+        display: flex;
+        width: screen;
+        /* border: 2px solid green; */
+        height: fit-content;
+        margin-left: 100px;
+        /* margin-right: 100px; */
+        gap: 30px;
+    }
+
+    .portfolio2-image {
+        position: relative;
+        /* border: 3px solid yellow; */
+        height: fit-content;
+        width: 100%;
+    }
+
+    .portfolio2-discription {
+        /* border: 3px solid red; */
+        width: 100%;
+        height: fit-content;
+    }
+
+    .girl-image{
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
 }
 </style>

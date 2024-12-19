@@ -6,6 +6,8 @@ import Services from "@/customComponenents/services.vue";
 import Portfolio from "@/customComponenents/portfolio.vue";
 import Teams from "@/customComponenents/teams.vue";
 import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
+import team from "@/customComponenents/Team/team.vue";
+
 </script>
 <template>
     <section class="mainSection">
@@ -16,6 +18,7 @@ import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
         <div class="grid grid-cols-1 justify-center">
             <Portfolio/>
         <portfolio2/>
+        <team/>
 
         </div>
 
