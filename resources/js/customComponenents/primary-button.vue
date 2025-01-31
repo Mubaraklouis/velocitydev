@@ -10,7 +10,7 @@
 .primary-button{
     background-color:var(--secondaryColor);
     color:#fff;
-    padding:5px 20px;
+    padding:10px 30px;
     width:fit-content;
     border-radius:20px;
 

@@ -8,44 +8,29 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
 <template>
 
 
-<section class="hero-section">
-
-
-    <div class="hero-section-wrapper">
 
 
 
-        <!-- this is the hero section text and header -->
+<section class="ml-10 hero-section-wrapper  mb-32">
 
-        <div class=" hero-section-text">
-            <h1 class="font-extrabold text-3xl text-[#093228] mt-10 mb-10">
-            Design Your Dream
-        </h1>
 
-        <div>
-            <p class="hero-text">
+    <div class="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5" data-aos="fade-right" data-aos-duration="800">
+          <div class="pr-2 md:mb-14 py-14 md:py-0">
+            <h1 class="text-3xl font-semibold text-blue-900 xl:text-5xl lg:text-3xl"><span class="block w-full">Design Your Dream</span> and grow your business!</h1>
+            <p class="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
                 Get custom T-shirts and Eye-catching flyers and More!
                 elevate your brand with custom Tees,Graphic Design and Trading solutions
             </p>
-
-        <Glow/>
-
-        </div>
-        <div class="mt-10">
-              <PrimaryButton title="Explore More"/>
+            <div class="mt-4">
+             <PrimaryButton title="Explore More"/>
             </div>
+          </div>
+
+          <div class="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+            <img id="heroImg1" class="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0" src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt="Awesome hero page image" width="500" height="488"/>
+          </div>
         </div>
 
-        <div class=" hero-section-text">
-
-            <div>
-    <div>
-        <img src="/icons/Ellipse.png" alt="">
-    </div>
-</div>
-        </div>
-
-    </div>
 
 
 </section>
@@ -53,43 +38,46 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
 
 <style scoped>
 
-.hero-section{
-    background-image: linear-gradient(180deg, #FCE2E2, 80%,#2E297D);
+/* Media query for laptop medium size  screens */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .hero-section-wrapper {
+        width: screen;
+
+
+        margin-left: 91px;
+        margin-right: 91px;
+
+        display: flex;
+    }
 }
+
+/* Media querry for large size laptop screen */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    .hero-section-wrapper {
+        width: screen;
+        display: flex;
+        justify-content: space-between;
+
+
+        margin-left: 230px;
+        margin-right: 230px;
+    }
+}
+
+/* media query for tablet size and large mobile phones */
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+    .hero-section-wrapper {
+        width: screen;
+
+        margin-left: 91px;
+        margin-right: 91px;
+    }
+}
+
 .hero-text{
     font-family: "Abel", sans-serif;
 }
-.hero-section-wrapper{
-
-    padding: 30px;
-
-}
-.glow{
-    z-index: 1;
 
 
-}
-
-
-
-/* Media query for laptop screens */
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-
-    .hero-section-wrapper{
-     display: flex;
-     justify-content: space-between;
-
-
-}
-.hero-section-text{
-    width: 500px;
-}
-
-.hero-section-wrapper{
-    padding: 60px;
-
-}
-
-}
 
 </style>

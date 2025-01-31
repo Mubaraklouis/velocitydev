@@ -58,7 +58,7 @@ import primaryButton from '../primary-button.vue';
         width: screen;
         /* border: 2px solid green; */
         height: fit-content;
-        margin-left: 100px;
+        margin-left: 150px;
         margin-right: 100px;
         gap: 30px;
     }
@@ -90,7 +90,7 @@ import primaryButton from '../primary-button.vue';
         width: screen;
         /* border: 2px solid green; */
         height: fit-content;
-        margin-left: 100px;
+        margin-left: 150px;
         /* margin-right: 100px; */
         gap: 30px;
     }

@@ -9,7 +9,7 @@ const addUser= (user)=>{
 }
 
 
-//mer is here playing alot so i want to eat hime with the laptop okay yes 
+//mer is here playing alot so i want to eat hime with the laptop okay yes
 </script>
 <template>
     <section>
@@ -102,7 +102,7 @@ const addUser= (user)=>{
     width: screen;
     z-index: 1;
     /* position: absolute; */
-    margin-left: 100px;
+    margin-left: 150px;
     margin-right: 100px;
     gap: 30px;
 
@@ -136,7 +136,7 @@ const addUser= (user)=>{
     width: screen;
     z-index: 1;
     /* position: absolute; */
-    margin-left: 100px;
+    margin-left: 150px;
     /* margin-right: 100px; */
     gap: 30px;
 
