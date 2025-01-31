@@ -2,6 +2,14 @@
 import primaryButton from "./primary-button.vue";
 import Leftglow from "@/Components/leftglow.vue";
 import Rightglow from "./rightglow.vue";
+
+
+const addUser= (user)=>{
+    console.log(user)
+}
+
+
+//mer is here playing alot so i want to eat hime with the laptop okay yes 
 </script>
 <template>
     <section>
