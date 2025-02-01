@@ -11,12 +11,11 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
 
 
 
-<section class="ml-10 hero-section-wrapper  mb-32">
-
+<section class="ml-10 hero-section-wrapper  mt-32 ">
 
     <div class="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5" data-aos="fade-right" data-aos-duration="800">
           <div class="pr-2 md:mb-14 py-14 md:py-0">
-            <h1 class="text-3xl font-semibold text-blue-900 xl:text-5xl lg:text-3xl"><span class="block w-full">Design Your Dream</span> and grow your business!</h1>
+            <h1 class="text-3xl font-semibold text-blue-900 xl:text-5xl lg:text-3xl"><span class="block w-full">Design Your Dream !</span></h1>
             <p class="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
                 Get custom T-shirts and Eye-catching flyers and More!
                 elevate your brand with custom Tees,Graphic Design and Trading solutions

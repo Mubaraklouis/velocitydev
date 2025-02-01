@@ -8,6 +8,7 @@ import Teams from "@/customComponenents/teams.vue";
 import portfolio2 from "@/customComponenents/portfolio/portfolio2.vue";
 import team from "@/customComponenents/Team/team.vue";
 import Footer from "@/customComponenents/folder/footer.vue";
+import Contact from "@/customComponenents/contact/contact.vue";
 
 
 
@@ -20,6 +21,10 @@ import Footer from "@/customComponenents/folder/footer.vue";
         <Portfolio/>
         <portfolio2/>
         <Services/>
+
+
+        <Contact/>
+
         <team/>
 
         <Footer/>
