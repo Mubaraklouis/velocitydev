@@ -13,6 +13,7 @@
     padding:10px 30px;
     width:fit-content;
     border-radius:20px;
+    cursor: pointer;
 
 }
 
