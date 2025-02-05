@@ -29,3 +29,16 @@
 
     </section>
     </template>
+
+    <style>
+    .service-shadow{
+    width: 40%;
+    background-color: #FCE2E2;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+}
+</style>

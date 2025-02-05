@@ -9,7 +9,6 @@ const addUser= (user)=>{
 }
 
 
-//mer is here playing alot so i want to eat hime with the laptop okay yes
 </script>
 <template>
     <section>

@@ -102,8 +102,6 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-
 .contact-form{
     grid-column: 2 / span 3;
 }
@@ -115,16 +113,9 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
     .contact-form{
         margin-top: 100px;
 
-
-
     }
 
-
-
-
 }
-
-
 @media  screen and (max-width: 768px) {
     /* Styles for mobile devices */
 
