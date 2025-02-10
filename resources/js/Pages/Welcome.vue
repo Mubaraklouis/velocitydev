@@ -21,13 +21,7 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
         <Services/>
         <Portfolio/>
         <portfolio2/>
-
-
-
         <Testimonial/>
-
-
-
         <Contact/>
 
         <!-- <team/> -->
