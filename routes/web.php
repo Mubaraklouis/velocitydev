@@ -24,4 +24,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+
+//testing the same service
+
+Route::get('/calculator',function(){
+
+    //call the same service here
+
+});
+
 require __DIR__.'/auth.php';

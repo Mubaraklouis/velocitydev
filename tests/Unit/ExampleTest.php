@@ -4,6 +4,11 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
+
+test("example",function(){
+    $this->assertTrue(true);
+});
+
 class ExampleTest extends TestCase
 {
     /**
