@@ -2,11 +2,16 @@
 
 namespace Tests\Unit;
 
+use App\Services\Calculator;
 use PHPUnit\Framework\TestCase;
 
 
-test("example",function(){
-    $this->assertTrue(true);
+test("example test",function(){
+ $sumTwo = app()->make(Calculator::class)->sum(7,2);
+ $sumOne = app()->make(Calculator::class)->sum(7,2);
+
+ $this->assertSame($sumTwo,$sumOne);
+
 });
 
 class ExampleTest extends TestCase

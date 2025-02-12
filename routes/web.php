@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Services\Calculator;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -31,6 +32,12 @@ Route::middleware('auth')->group(function () {
 Route::get('/calculator',function(){
 
     //call the same service here
+
+// return the sum of two numbers here
+
+$sum = app()->make(Calculator::class)->sum(3,4);
+
+return $sum;
 
 });
 
