@@ -2,13 +2,9 @@
     <section class="service-card-wrapper">
     <div class="service-image-holder">
         <img class="service-card-image" src="/icons/ux.png" alt="">
-
     </div>
-
         <div class="service-shadow">
-
         </div>
-
         <div class="service-card">
           <div class="p-5">
             <h1>WEB DEV AND DESIGN</h1>
@@ -24,7 +20,6 @@
                 </div>
             </div>
           </div>
-        </div>
-
+</div>
     </section>
     </template>

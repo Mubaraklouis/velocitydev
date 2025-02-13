@@ -1,12 +1,10 @@
 <script setup>
 import primaryButton from "./primary-button.vue";
 import Leftglow from "@/Components/leftglow.vue";
-import Rightglow from "./rightglow.vue";
 
 
-const addUser= (user)=>{
-    console.log(user)
-}
+
+
 
 
 </script>
@@ -101,7 +99,7 @@ const addUser= (user)=>{
     width: screen;
     z-index: 1;
     /* position: absolute; */
-    margin-left: 150px;
+    margin-left: 220px;
     margin-right: 100px;
     gap: 30px;
 
@@ -135,7 +133,7 @@ const addUser= (user)=>{
     width: screen;
     z-index: 1;
     /* position: absolute; */
-    margin-left: 150px;
+    margin-left: 220px;
     /* margin-right: 100px; */
     gap: 30px;
 

@@ -40,7 +40,7 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
 :root{
     --primaryColor:#FCE2E2;
     --secondaryColor:#363092;
-    --inputColor:#CFACAC;
+    --inputColor:#fffafa;
     --mediumScreenMargin:3.75rem 0,7.5rem 7.5rem;
 }
 

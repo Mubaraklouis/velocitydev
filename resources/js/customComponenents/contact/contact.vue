@@ -1,6 +1,8 @@
 <script setup>
 import PrimaryButton from '@/customComponenents/primary-button.vue';
 
+
+
 </script>
 
 <template>
