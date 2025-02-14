@@ -13,6 +13,7 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
 
 
 
+
 </script>
 <template>
     <section class="mainSection">
@@ -25,6 +26,8 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
         <Contact/>
 
         <!-- <team/> -->
+
+  
 
         <Footer/>
     </section>
