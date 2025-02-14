@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import PrimaryButton from "../../customComponenents/primary-button.vue";
+
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
 
 const form = useForm({
     name: '',
@@ -106,13 +107,13 @@ const submit = () => {
 
 <GuestLayout>
 
-    <section class="bg-[#FCE2E2]">
+
 
         <section class="contact-section-wrapper pt-20 ">
     <h1
             class="mt-20 ml-10 mb-10 text-4xl font-extrabold  text-extrabold"
         >
-            Contact
+            Register
         </h1>
         <section class="contact-wrapper-border contact-info-wrapper relative w-[100%] mx-auto">
     <div class="contact-connect-section connect-border p-4 bg-[#CFACAC] h-60 relative overflow-visible w-[80%] mx-auto rounded-lg shadow-md">
@@ -220,12 +221,23 @@ const submit = () => {
 
 
 <div class="flex items-center">
+
+
+<div>
     <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
     <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
-
-
-         <PrimaryButton class="bg-red" title="submit"/>
 </div>
+
+
+
+
+
+
+</div>
+
+<PrimaryButton>
+        Submit
+    </PrimaryButton>
 
 
 
@@ -235,11 +247,6 @@ const submit = () => {
 
 
  </section>
-
-
-
-    </section>
-
 
 
 </GuestLayout>
