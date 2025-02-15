@@ -26,19 +26,14 @@ Route::middleware('auth')->group(function () {
 });
 
 
+/*
+* prefix(users) => users is added to all routes that belongs to user crude operation
+* method => performing all the user crude
+*/
 
-//testing the same service
-
-Route::get('/calculator',function(){
-
-    //call the same service here
-
-// return the sum of two numbers here
-
-$sum = app()->make(Calculator::class)->sum(3,4);
-
-return $sum;
-
+Route::prefix('dashboard/users')->middleware('auth')->group(function(){
+ require __DIR__ ."/users/users.php";
 });
+
 
 require __DIR__.'/auth.php';
