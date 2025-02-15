@@ -6,6 +6,6 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 <template>
   <AuthenticatedLayout>
     <!-- users table and information -->
-    <UsersTable/>
+
   </AuthenticatedLayout>
 </template>
