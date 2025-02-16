@@ -108,7 +108,7 @@ function updateUser($id:any){
 
                 <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
 
-                    <EditPasswordForm class="max-w-xl"/>
+                    <EditPasswordForm :id="form.user_id" class="max-w-xl"/>
                 </div>
 
                 <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">

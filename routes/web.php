@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
 /*
 * prefix(users) => users is added to all routes that belongs to user crude operation
 * method => performing all the user crude

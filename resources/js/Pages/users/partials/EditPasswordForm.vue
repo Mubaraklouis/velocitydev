@@ -8,15 +8,18 @@ import { ref } from 'vue';
 
 const passwordInput = ref<HTMLInputElement | null>(null);
 const currentPasswordInput = ref<HTMLInputElement | null>(null);
+const props = defineProps({
+    id:Number
+});
 
 const form = useForm({
-    current_password: '',
+    id:props.id,
     password: '',
     password_confirmation: '',
 });
 
 const updatePassword = () => {
-    form.put(route('password.update'), {
+    form.patch(route('user.update.password',form.id), {
         preserveScroll: true,
         onSuccess: () => {
             form.reset();
@@ -26,10 +29,7 @@ const updatePassword = () => {
                 form.reset('password', 'password_confirmation');
                 passwordInput.value?.focus();
             }
-            if (form.errors.current_password) {
-                form.reset('current_password');
-                currentPasswordInput.value?.focus();
-            }
+
         },
     });
 };
@@ -46,7 +46,7 @@ const updatePassword = () => {
         </header>
 
         <form @submit.prevent="updatePassword" class="mt-6 space-y-6">
-  
+
             <div>
                 <InputLabel for="password" value="New Password" />
 
