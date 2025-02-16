@@ -60,4 +60,31 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function changeProfile(Request $request)
+    {
+        // Validate the file
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Max 2MB file
+        ]);
+
+        // Check if the file exists in the request
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+
+            // Store the file in the 'public' disk under the 'profile-pictures' directory
+            $path = $file->store('profile-pictures', 'public');
+
+            // Optionally, save the file path to the user's profile in the database
+            $user = $request->user();
+            $user->profile_picture = $path;
+            $user->save();
+
+            // Return a success response
+            return Redirect::back()->with('success', 'Profile picture updated successfully!');
+        }
+
+        // Return an error response if no file is uploaded
+        return Redirect::back()->with('error', 'No file uploaded.');
+    }
 }
