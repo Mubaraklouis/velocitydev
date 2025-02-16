@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Rules\MatchUserEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -95,5 +96,31 @@ class usersController extends Controller
         ]);
 
         return back();
+    }
+
+
+        /*
+    * Method: destroy($id)
+    * Descriptions :  deletes a specific user from the database
+    * Return : user page
+    *
+     */
+
+    public function destroy(Request $request,$id):RedirectResponse
+    {
+
+
+
+        $request->validate([
+            'email' => ['required',new MatchUserEmail],
+        ]);
+
+
+
+        $user = User::find($id);
+
+        $user->delete();
+
+        return Redirect::route('users.index');
     }
 }

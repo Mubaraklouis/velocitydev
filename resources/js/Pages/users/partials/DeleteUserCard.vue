@@ -1,29 +1,37 @@
 <script setup lang="ts">
 import DangerButton from '@/Components/DangerButton.vue';
 import InputError from '@/Components/InputError.vue';
+import InputLabel from '@/Components/InputLabel.vue';
 import Modal from '@/Components/Modal.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
+import TextInput from '@/Components/TextInput.vue';
 import { useForm } from '@inertiajs/vue3';
 import { nextTick, ref } from 'vue';
 
 const confirmingUserDeletion = ref(false);
-const passwordInput = ref<HTMLInputElement | null>(null);
+const emailInput = ref<HTMLInputElement | null>(null);
+
+const props = defineProps({
+    id:Number
+})
 
 const form = useForm({
-    password: '',
+
+    email: '',
+    id:props.id
 });
 
 const confirmUserDeletion = () => {
     confirmingUserDeletion.value = true;
 
-    nextTick(() => passwordInput.value?.focus());
+    nextTick(() => emailInput.value?.focus());
 };
 
 const deleteUser = () => {
-    form.delete(route('profile.destroy'), {
+    form.delete(route('user.delete',form.id), {
         preserveScroll: true,
         onSuccess: () => closeModal(),
-        onError: () => passwordInput.value?.focus(),
+        onError: () => emailInput.value?.focus(),
         onFinish: () => {
             form.reset();
         },
@@ -63,7 +71,22 @@ const closeModal = () => {
 
                 <div class="mt-6">
 
-                    <InputError :message="form.errors.password" class="mt-2" />
+                    <InputError :message="form.errors.email" class="mt-2" />
+                </div>
+
+                <div class="mt-6">
+                    <InputLabel for="email" value="email" class="sr-only" />
+
+                    <TextInput
+                        id="email"
+                        ref="emailInput"
+                        v-model="form.email"
+                        type="email"
+                        class="mt-1 block w-3/4"
+                        placeholder="email"
+                        @keyup.enter="deleteUser"
+                    />
+
                 </div>
 
                 <div class="mt-6 flex justify-end">

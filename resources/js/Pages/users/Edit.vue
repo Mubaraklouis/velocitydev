@@ -112,7 +112,7 @@ function updateUser($id:any){
                 </div>
 
                 <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                    <DeleteUserCard/>
+                    <DeleteUserCard :id="form.user_id"/>
                 </div>
             </div>
         </div>
