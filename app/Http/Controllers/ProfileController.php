@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -75,9 +76,11 @@ class ProfileController extends Controller
             // Store the file in the 'public' disk under the 'profile-pictures' directory
             $path = $file->store('profile-pictures', 'public');
 
-            // Optionally, save the file path to the user's profile in the database
+            $filePath = Storage::disk('public')->url($path);
+
+            // save the file path to the user's profile in the database
             $user = $request->user();
-            $user->profile_picture = $path;
+            $user->profile_picture = $filePath;
             $user->save();
 
             // Return a success response

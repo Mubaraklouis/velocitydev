@@ -173,7 +173,7 @@ const logout = ()=>{
                         data-dropdown-toggle="userDropdown"
                         data-dropdown-placement="bottom-start"
                         class="w-14 h-14 rounded-full cursor-pointer border-2 border-indigo-600 "
-                        src="/contact-im.png"
+                        :src="$page.props.auth.user.profile_picture"
                         alt="User dropdown"
                     />
 

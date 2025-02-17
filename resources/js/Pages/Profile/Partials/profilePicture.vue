@@ -8,7 +8,7 @@
                             <form @submit.prevent="uploadImage">
                                 <div class="text-center">
                                     <div>
-                                        <img :src="$page.props.auth.user.profile_image" alt="Profile Picture"
+                                        <img :src="$page.props.auth.user.profile_picture" alt="Profile Picture"
                                             class="rounded-full w-32 h-32 mx-auto border-4 border-indigo-800 mb-4 transition-transform duration-300 hover:scale-105 ring ring-gray-300">
                                         <input @change="handleFileChange" type="file" name="profile" id="upload_profile"
                                             hidden required>
