@@ -169,7 +169,7 @@ const submit = () => {
                             <!-- <TextInput class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75" type="text" placeholder="Enter Full Name....."/> -->
                             <TextInput
                                 id="name"
-                                type="text"
+                                type="email"
                                 class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75"
                                 placeholder="Enter Email....."
                                 v-model="form.email"

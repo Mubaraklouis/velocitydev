@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\storeUserRequest;
 use App\Models\User;
 use App\Rules\MatchUserEmail;
 use Illuminate\Http\RedirectResponse;
@@ -10,6 +11,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
+use Illuminate\Validation\Rules;
 
 class usersController extends Controller
 {
@@ -60,6 +62,44 @@ class usersController extends Controller
             ]
         );
     }
+
+        /*
+    * Method: createUser()
+    * Descriptions : returning a form for adding a new user
+    * Return : vue page with form for adding a user
+    *
+     */
+
+     public function createUser(){
+        return Inertia::render('users/createUser');
+     }
+
+          /*
+    * Method: storeUser()
+    * Descriptions : store user in the database
+    * Return : response with  success message if the user stored
+    *
+     */
+
+     public function storeUser(storeUserRequest $request){
+
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|lowercase|email|max:255|unique:'.User::class,
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect(route('users.index', absolute: false));
+
+     }
+
 
 
 

@@ -88,17 +88,24 @@ const props = defineProps<{
                                 aria-labelledby="dropdownActionButton"
                             >
                                 <li>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        :href="route('user.create')"
                                         class="block text-white px-4 py-2 hover:bg-[#9f99f7]  dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >Reward</a
+                                        >Add User</Link
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#"
                                         class="block text-white px-4 py-2 hover:bg-[#9f99f7]  dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >Promote</a
+                                        >Assign Role</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="block text-white px-4 py-2 hover:bg-[#9f99f7]  dark:hover:bg-gray-600 dark:hover:text-white"
+                                        >De-activate account</a
                                     >
                                 </li>
                                 <li>
@@ -113,7 +120,7 @@ const props = defineProps<{
                                 <a
                                     href="#"
                                     class="block text-white px-4 py-2 text-sm text-gray-700 hover:bg-[#9f99f7]  dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >Delete User</a
+                                    >Delete Users</a
                                 >
                             </div>
                         </div>
