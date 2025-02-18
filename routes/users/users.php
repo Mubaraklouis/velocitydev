@@ -11,4 +11,5 @@ Route::patch('/{id}/password/update',[usersController::class,'updateUserPassword
 Route::delete('/{id}/delete',[usersController::class,'destroy'])->name('user.delete');
 Route::get('/create-user',[usersController::class,'createUser'])->name('user.create');
 Route::post('/store-user',[usersController::class,'storeUser'])->name('user.store');
+Route::post('multiple-delete',[usersController::class,'multipleDelete'])->name('user.multipleDelete');
 

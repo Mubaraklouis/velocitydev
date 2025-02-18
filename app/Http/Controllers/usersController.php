@@ -45,7 +45,7 @@ class usersController extends Controller
 
         // dd($formattedMinutes);
 
-   if($formattedMinutes < 1){
+   if($user->last_seen !== null && $formattedMinutes < 1 ){
    $user->isOnline = true;
    $user->save();
    }
@@ -192,5 +192,19 @@ class usersController extends Controller
         $user->delete();
 
         return Redirect::route('users.index');
+    }
+
+
+
+    public function multipleDelete(Request $request){
+        $request->validate([
+            'ids' => 'required|array',
+            'ids.*' => 'integer|exists:users,id' // Ensure each ID exists in 'posts' table
+        ]);
+
+         // Delete records where the ID is in the given array
+         User::whereIn('id', $request->ids)->delete();
+        return  Redirect::back();
+
     }
 }

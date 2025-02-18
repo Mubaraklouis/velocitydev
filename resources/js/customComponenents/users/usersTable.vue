@@ -2,6 +2,7 @@
 import { Link } from '@inertiajs/vue3';
 import pagination from '@/customComponenents/pagination/pagination.vue'
 import moment from 'moment';
+import {useForm} from '@inertiajs/vue3';
 
 
 
@@ -44,6 +45,14 @@ interface PaginatedData {
 const props = defineProps<{
   users: PaginatedData;
 }>();
+
+const form = useForm({
+    ids:[]
+})
+
+const multipleDelete = ()=>{
+    form.post(route('user.multipleDelete'));
+}
 
 </script>
 
@@ -117,10 +126,11 @@ const props = defineProps<{
                                 </li>
                             </ul>
                             <div class="py-1">
-                                <a
+                                <Link @click="multipleDelete"
+                                    as="button"
                                     href="#"
                                     class="block text-white px-4 py-2 text-sm text-gray-700 hover:bg-[#9f99f7]  dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >Delete Users</a
+                                    >Delete Users</Link
                                 >
                             </div>
                         </div>
@@ -178,7 +188,7 @@ const props = defineProps<{
                     class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-200">
                     <td class="w-4 p-4">
                         <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox"
+                            <input id="checkbox-table-search-1" type="checkbox" :value="user.id" v-model="form.ids"
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                             <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                         </div>
@@ -195,7 +205,8 @@ const props = defineProps<{
                         </div>
                     </th>
                     <td class="px-6 py-4">Blogger</td>
-                    <td class="px-6 py-4">{{moment(user.last_seen).startOf('minute').fromNow()}}</td>
+                    <td v-if="user.last_seen" class="px-6 py-4">{{moment(user.last_seen).startOf('minute').fromNow()}}</td>
+                    <td v-else class="px-6 py-4">Never active</td>
 
                     <td class="px-6 py-4">
                         <div v-if="user.isOnline" class="flex items-center">
@@ -203,7 +214,12 @@ const props = defineProps<{
                            online
 
                         </div>
-                        <div v-else class="flex items-center">
+                        <div v-else-if="user.last_seen == null" class="flex items-center">
+                            <div class="h-2.5 w-2.5 rounded-full bg-gray-500 me-2"></div>
+                          inactive
+                        </div>
+
+                        <div v-else="user.last_seen == null" class="flex items-center">
                             <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
                            offline
                         </div>
