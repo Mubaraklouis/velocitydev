@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
 import pagination from '@/customComponenents/pagination/pagination.vue'
+import moment from 'moment';
 
 
 
@@ -11,6 +12,9 @@ interface User {
     name: string;
     email: string;
     created_at: string;
+    profile_picture:string
+    isOnline:boolean,
+    last_seen:string
 }
 
 // Define the structure of the paginated data
@@ -156,7 +160,8 @@ const props = defineProps<{
                         </div>
                     </th>
                     <th scope="col" class="px-6 py-3">Name</th>
-                    <th scope="col" class="px-6 py-3">Position</th>
+                    <th scope="col" class="px-6 py-3">Accout Type</th>
+                    <th scope="col" class="px-6 py-3">Last Seen</th>
                     <th scope="col" class="px-6 py-3">Status</th>
                     <th scope="col" class="px-6 py-3">Action</th>
                 </tr>
@@ -172,7 +177,7 @@ const props = defineProps<{
                         </div>
                     </td>
                     <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                        <img class="w-10 h-10 rounded-full" src="/contact-im.png" alt="Jese image" />
+                        <img class="w-10 h-10 rounded-full" :src="user.profile_picture" alt="Jese image" />
                         <div class="ps-3">
                             <div class="text-base font-semibold">
                                 {{ user.name }}
@@ -182,12 +187,20 @@ const props = defineProps<{
                             </div>
                         </div>
                     </th>
-                    <td class="px-6 py-4">React Developer</td>
+                    <td class="px-6 py-4">Blogger</td>
+                    <td class="px-6 py-4">{{moment(user.last_seen).startOf('minute').fromNow()}}</td>
+
                     <td class="px-6 py-4">
-                        <div class="flex items-center">
+                        <div v-if="user.isOnline" class="flex items-center">
                             <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
-                            Online
+                           online
+
                         </div>
+                        <div v-else class="flex items-center">
+                            <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
+                           offline
+                        </div>
+
                     </td>
                     <td class="px-6 py-4">
                         <Link :href="route('user.edit',user.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</Link>

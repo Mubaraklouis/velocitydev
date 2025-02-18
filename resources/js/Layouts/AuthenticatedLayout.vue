@@ -269,9 +269,9 @@ const logout = ()=>{
                                     <h4
                                         class="text-2xl font-semibold text-gray-700"
                                     >
-                                        4644
+                                        {{ $page.props.usersCount }}
                                     </h4>
-                                    <div class="text-gray-500">New Users</div>
+                                    <div class="text-gray-500">Total Users</div>
                                 </div>
                             </div>
                         </div>

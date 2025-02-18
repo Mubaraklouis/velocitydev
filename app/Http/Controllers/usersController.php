@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Rules\MatchUserEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
@@ -24,6 +25,33 @@ class usersController extends Controller
     {
         $users = $user->paginate(6);
         $users->toArray();
+        foreach ($users as $user) {
+
+                // dd($this->last_seen->diffInMinutes());
+        $timestamp = $user->last_seen;
+
+        $time = Carbon::parse($timestamp);
+
+        // Calculate the difference in seconds (signed difference)
+        $diffInSeconds = Carbon::now()->diffInSeconds($time, false);
+
+        // Convert seconds to minutes and take the absolute value
+        $diffInMinutes = abs($diffInSeconds / 60);
+
+        // Format to 3 decimal points
+        $formattedMinutes = number_format($diffInMinutes, 3);
+
+        // dd($formattedMinutes);
+
+   if($formattedMinutes < 1){
+   $user->isOnline = true;
+   $user->save();
+   }
+   else{
+    $user->isOnline = false;
+   $user->save();
+   }
+        }
 
         return Inertia::render(
             "users/users",
@@ -45,6 +73,8 @@ class usersController extends Controller
 
      public function editUsers(User $user,$id)
      {
+
+
          $user = $user->find($id);
 
 

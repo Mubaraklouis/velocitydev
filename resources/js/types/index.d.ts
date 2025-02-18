@@ -1,4 +1,5 @@
 export interface User {
+    profile_picture: string | undefined;
     id: number;
     name: string;
     email: string;
