@@ -25,7 +25,7 @@ class usersController extends Controller
 
     public function users(User $user)
     {
-        $users = $user->paginate(6);
+        $users = $user->latest()->paginate(6);
         $users->toArray();
         foreach ($users as $user) {
 
@@ -193,7 +193,6 @@ class usersController extends Controller
 
         return Redirect::route('users.index');
     }
-
 
 
     public function multipleDelete(Request $request){

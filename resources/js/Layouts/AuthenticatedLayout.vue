@@ -6,6 +6,7 @@ import DropdownLink from "@/Components/DropdownLink.vue";
 import NavLink from "@/Components/NavLink.vue";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
 import { Link, router } from "@inertiajs/vue3";
+import UserProfileAvator from "@/Pages/users/partials/userProfileAvator.vue";
 
 const showingNavigationDropdown = ref(false);
 
@@ -132,6 +133,7 @@ const logout = ()=>{
                         </svg>
                         Settings
                     </a>
+                    <UserProfileAvator class="items-bottom"/>
                 </nav>
             </div>
         </div>
@@ -166,6 +168,8 @@ const logout = ()=>{
                         placeholder="Search"
                     />
                 </div>
+
+
                 <div class="flex items-center pr-4 mr-20">
                     <img
                         id="avatarButton"
@@ -221,6 +225,8 @@ const logout = ()=>{
                     </div>
                 </div>
             </div>
+
+
 
             <div class="p-10">
                 <div class="m-6">
