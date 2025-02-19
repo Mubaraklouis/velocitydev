@@ -4,15 +4,14 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Link, useForm, usePage } from '@inertiajs/vue3';
-import DeleteUserForm from '../Profile/Partials/DeleteUserForm.vue';
-import UpdatePasswordForm from '../Profile/Partials/UpdatePasswordForm.vue';
+import {  useForm } from '@inertiajs/vue3';
+
 import DeleteUserCard from './partials/DeleteUserCard.vue';
 import EditPasswordForm from './partials/EditPasswordForm.vue';
 
 
 interface User{
-    id:Number
+    id:number
     name:string,
     email:string
 }

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 import { Link } from '@inertiajs/vue3';
 import pagination from '@/customComponenents/pagination/pagination.vue'
 import moment from 'moment';
@@ -8,44 +8,13 @@ import UserProfileAvator from '@/Pages/users/partials/userProfileAvator.vue';
 
 
 
-// Define the structure of a user
-interface User {
-    id: number;
-    name: string;
-    email: string;
-    created_at: string;
-    profile_picture:string
-    isOnline:boolean,
-    last_seen:string
-}
 
-// Define the structure of the paginated data
-interface PaginationLink {
-    url: string | null;
-    label: string;
-    active: boolean;
-}
-
-interface PaginatedData {
-    data: User[];
-    links: PaginationLink[]; // Array of pagination links
-    meta: {
-        current_page: number;
-        from: number;
-        last_page: number;
-        path: string;
-        per_page: number;
-        to: number;
-        total: number;
-        links?: PaginationLink[]; // Optional nested links for Laravel's pagination
-    };
-}
 
 //define the props that contents the user paginated data
 
-const props = defineProps<{
-  users: PaginatedData;
-}>();
+const props = defineProps({
+  users: Object
+});
 
 const form = useForm({
     ids:[]
