@@ -1,8 +1,5 @@
 <script setup>
 import PrimaryButton from '@/customComponenents/primary-button.vue';
-
-
-
 </script>
 
 <template>
@@ -123,7 +120,6 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
 
     .contact-form{
         margin-top: 50px;
-
 
     }
 }

@@ -47,6 +47,7 @@ class HandleInertiaRequests extends Middleware
             "usersCount"=>User::count()
 
         ];
+        // i have added the isOnline method to the user model
 
     }
 }

@@ -3,11 +3,11 @@
 
     <!-- <div class="image-wrapper">
 
-    </div> -->
+    </div>
 
 
 
-    <div class="bg-[#2E297D] relative z-10  text-white  p-10 service-card">
+<div class="bg-[#2E297D] relative z-10  text-white  p-10 service-card">
         <div class="image-wrapper">
             <div class="service-image">
                 <cctv/>
@@ -15,10 +15,10 @@
 
             </div>
 
-    </div>
+</div>
 
-                    <h1 class="mt-6 mb-6 font-bold ">CCTV CAMERA INSTALLATION</h1>
-                    <div>
+<h1 class="mt-6 mb-6 font-bold ">CCTV CAMERA INSTALLATION</h1>
+<div>
                         <p class="service-text">
                             We work with over 150 clients and install cctv cameras
                         </p>
@@ -35,11 +35,11 @@
 
 
                 </div>
-            </div>
-                    </div>
+</div>
+</div>
 
-                </div>
-    </div>
+</div>
+</div>
 
 
 
@@ -47,13 +47,13 @@
     <div class="relative bottom-0 z-0 service-shadow">
 
      </div>
-        <Service class="testing2"/>
-   </div>
+<Service class="testing2" />
+</div>
 
 
-   portflolio backup
+portflolio backup
 
-   <div class="portfolio-wrapper">
+<div class="portfolio-wrapper">
 
 <div class="mt-10 ml-20 mr-20 portfolio-text">
 

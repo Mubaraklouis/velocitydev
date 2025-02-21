@@ -29,7 +29,6 @@ class usersController extends Controller
         $users->toArray();
         foreach ($users as $user) {
 
-                // dd($this->last_seen->diffInMinutes());
         $timestamp = $user->last_seen;
 
         $time = Carbon::parse($timestamp);
