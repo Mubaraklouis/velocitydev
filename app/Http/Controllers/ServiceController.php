@@ -5,21 +5,27 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
 use App\Models\Service;
+use Inertia\Inertia;
 
 class ServiceController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * @Discription :Display a listing of the services from the database.
+     * @return mixed
      */
-    public function index()
+    public function index(Service $service): mixed
     {
-        //
+        //get all the services from the database
+        $services = $service->latest()->paginate(6);
+        //return the services prop in an inertia vue page
+        return Inertia::render('Services/Services', ['services' => $services]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreServiceRequest $request)
+
+     public function store(StoreServiceRequest $request)
     {
         //
     }
