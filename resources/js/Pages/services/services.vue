@@ -1,5 +1,10 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import ServiceTable from './partials/serviceTable.vue';
+
+defineProps({
+    services: Object
+});
 
 
 
@@ -10,7 +15,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
     <div>
         <AuthenticatedLayout>
 
-            <h1>services page</h1>
+            <ServiceTable :services="services"/>
 
         </AuthenticatedLayout>
 

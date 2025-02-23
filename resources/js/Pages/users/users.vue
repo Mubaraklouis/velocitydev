@@ -5,7 +5,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
 
 defineProps({
-    users: Object // Ensure `users` is required and matches the `PaginatedData` interface
+    users: Object
 });
 </script>
 
