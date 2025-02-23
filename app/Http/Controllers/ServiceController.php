@@ -18,7 +18,7 @@ class ServiceController extends Controller
         //get all the services from the database
         $services = $service->latest()->paginate(6);
         //return the services prop in an inertia vue page
-        return Inertia::render('Services/Services', ['services' => $services]);
+        return Inertia::render('services/services', ['services' => $services]);
     }
 
     /**

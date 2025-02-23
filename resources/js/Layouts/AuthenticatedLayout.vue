@@ -71,10 +71,9 @@ const logout = ()=>{
                         </svg>
                         Users
                     </Link>
-                    <a
-                        href="#"
-                        class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700"
-                    >
+                    <Link
+                        :href="route('services.index')"
+                        class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-6 w-6 mr-2"
@@ -90,7 +89,7 @@ const logout = ()=>{
                         </svg>
 
                         Services
-                    </a>
+                    </Link>
 
                     <a
                         href="#"

@@ -37,5 +37,16 @@ Route::prefix('dashboard/users')->middleware(['auth'])->group(function(){
  require __DIR__ ."/users/users.php";
 });
 
+/*
+* prefix(services) => service is added to all routes that belongs to services crude operation
+* method => performing all the services crude
+*/
+
+
+Route::prefix('dashboard/services')->middleware(['auth'])->group(function(){
+    require __DIR__ ."/services/services.php";
+   });
+
+
 
 require __DIR__.'/auth.php';

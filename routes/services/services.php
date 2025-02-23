@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServiceController;
 
 
 /*
@@ -9,4 +10,4 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/services', 'ServiceController@index')->name('services.index');
+Route::get('/', [ServiceController::class,'index'])->name('services.index');
