@@ -41,13 +41,10 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'auth' => [
                 'user' => $request->user(),
-                'isOnline'=>optional($request->user())->isOnline()
 
             ],
             "usersCount"=>User::count()
-
         ];
-        // i have added the isOnline method to the user model
 
     }
 }
