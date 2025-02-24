@@ -47,7 +47,7 @@ const multipleDelete = ()=>{
             class="absolute left-0 w-40 mt-1 origin-top-left bg-[#7971E7] text-white p-4 divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
             <div class="py-1">
                 <Link
-            :href="route('user.create')"
+            :href="route('services.create')"
             class="block text-white px-4 py-2 hover:bg-[#9f99f7] dark:hover:bg-gray-600 dark:hover:text-white"
           >
             Add service

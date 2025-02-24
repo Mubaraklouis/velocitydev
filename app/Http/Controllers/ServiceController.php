@@ -21,6 +21,19 @@ class ServiceController extends Controller
         return Inertia::render('services/services', ['services' => $services]);
     }
 
+
+      /**
+     * @Discription :Dispaly a form that the admin  can fill to add a new service to the
+     * database.
+     * @return mixed
+     */
+    public function ceateService(Service $service): mixed
+    {
+        //return the services prop in an inertia vue page
+        return Inertia::render('services/serviceCreate');
+    }
+
+
     /**
      * Store a newly created resource in storage.
      */
@@ -35,7 +48,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        //
+
     }
 
     /**

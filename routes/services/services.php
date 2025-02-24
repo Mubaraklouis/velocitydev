@@ -11,3 +11,4 @@ use App\Http\Controllers\ServiceController;
 
 
 Route::get('/', [ServiceController::class,'index'])->name('services.index');
+Route::get('/service-create', [ServiceController::class,'ceateService'])->name('services.create');
