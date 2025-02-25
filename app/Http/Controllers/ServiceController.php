@@ -9,6 +9,18 @@ use Inertia\Inertia;
 
 class ServiceController extends Controller
 {
+
+        /**
+     * @Discription :Display a listing of the services from the database.
+     * @return mixed
+     */
+
+     public function services(Service $service): mixed{
+      //get all the services from the database
+        $services = $service->latest()->paginate(6);
+        return Inertia::render('Client/services', ['services' => $services]);
+     }
+
     /**
      * @Discription :Display a listing of the services from the database.
      * @return mixed
@@ -42,11 +54,13 @@ class ServiceController extends Controller
 
      public function store(StoreServiceRequest $request)
     {
+
+
         //validate the user requests
         $request->validate([
             'title'=>'required',
             'description'=>'required',
-            'image'=>'required'
+            // 'image'=>'required'
         ]);
 
         //create the service in the database
@@ -56,13 +70,13 @@ class ServiceController extends Controller
             'image'=>$request->image
         ];
 
+
+
         //store service
 
         Service::create($service);
+        return redirect()->route('services.index');
 
-        return response()->json([
-            "message"=>"service created successfully"
-        ]);
     }
 
     /**

@@ -33,7 +33,7 @@ PrimaryButton
         <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        <Link href="/services" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</Link>
       </li>
       <li>
         <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Team</a>

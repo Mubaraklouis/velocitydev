@@ -32,7 +32,7 @@ const submit = () => {
                             type="text"
                             class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75"
                             placeholder="Enter Title....."
-                            v-model="form.name"
+                            v-model="form.title"
                             required
                             autofocus
                             autocomplete="name"
@@ -46,7 +46,7 @@ const submit = () => {
                             type="email"
                             class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75"
                             placeholder="Enter Description....."
-                            v-model="form.email"
+                            v-model="form.description"
                             required
                             autofocus
                             autocomplete="name"

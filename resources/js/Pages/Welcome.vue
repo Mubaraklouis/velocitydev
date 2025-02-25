@@ -11,9 +11,6 @@ import Footer from "@/customComponenents/folder/footer.vue";
 import Contact from "@/customComponenents/contact/contact.vue";
 import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
 
-
-
-
 </script>
 <template>
     <section class="mainSection">
@@ -24,11 +21,7 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
         <portfolio2/>
         <Testimonial/>
         <Contact/>
-
         <!-- <team/> -->
-
-  
-
         <Footer/>
     </section>
 

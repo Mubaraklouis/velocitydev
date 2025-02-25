@@ -18,9 +18,9 @@ const props = defineProps({
   services: Object
 });
 
-const form = useForm({
-    ids:[]
-})
+// const form = useForm({
+//     ids:[]
+// })
 
 const multipleDelete = ()=>{
     form.post(route('user.multipleDelete'));
@@ -88,13 +88,13 @@ const multipleDelete = ()=>{
                     class="border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-200">
                     <td class="w-4 p-4">
                         <div class="flex items-center">
-                            <input id="checkbox-table-search-1" type="checkbox" :value="user.id" v-model="form.ids"
+                            <input id="checkbox-table-search-1" type="checkbox"
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                             <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                         </div>
                     </td>
                     <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                        <img class="w-10 h-10 rounded-full" :src="user.profile_picture" alt="Jese image" />
+                        <img class="w-10 h-10 rounded-full" :src="service.profile_picture" alt="Jese image" />
                         <div class="ps-3">
                             <div class="text-base font-semibold">
                                 {{ service.title }}
@@ -107,7 +107,7 @@ const multipleDelete = ()=>{
                     <td class="px-6 py-4">Technology</td>
 
                     <td class="px-6 py-4">
-                        <Link :href="route('user.edit',user.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit service</Link>
+                        <Link :href="route('user.edit',service.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit service</Link>
                     </td>
                 </tr>
             </tbody>

@@ -49,4 +49,11 @@ Route::prefix('dashboard/services')->middleware(['auth'])->group(function(){
 
 
 
+
+
+Route::prefix('/services')->group(function(){
+    require __DIR__ ."/services/client/services.php";
+   });
+
+
 require __DIR__.'/auth.php';
