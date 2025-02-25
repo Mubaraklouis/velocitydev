@@ -27,20 +27,42 @@ class ServiceController extends Controller
      * database.
      * @return mixed
      */
-    public function ceateService(Service $service): mixed
+    public function ceateService(Service $service ): mixed
     {
         //return the services prop in an inertia vue page
+
         return Inertia::render('services/serviceCreate');
     }
 
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created service in the database storage.
+     * @return : null
      */
 
      public function store(StoreServiceRequest $request)
     {
-        //
+        //validate the user requests
+        $request->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'image'=>'required'
+        ]);
+
+        //create the service in the database
+        $service = [
+            'title'=>$request->title,
+            'description'=>$request->description,
+            'image'=>$request->image
+        ];
+
+        //store service
+
+        Service::create($service);
+
+        return response()->json([
+            "message"=>"service created successfully"
+        ]);
     }
 
     /**

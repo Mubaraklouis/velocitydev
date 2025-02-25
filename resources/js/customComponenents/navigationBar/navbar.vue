@@ -1,11 +1,8 @@
 <script setup>
 import PrimaryButton from '@/Components/PrimaryButton.vue';
-
+import { Link } from '@inertiajs/vue3';
 PrimaryButton
-
 </script>
-
-
 <template>
 
 <nav class="bg-[#FCE2E2] dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
@@ -42,8 +39,9 @@ PrimaryButton
         <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Team</a>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        <Link href="register" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign up</Link>
       </li>
+      <li><Link href="/login" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign in</Link></li>
     </ul>
   </div>
   </div>

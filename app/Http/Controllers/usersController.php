@@ -100,8 +100,6 @@ class usersController extends Controller
      }
 
 
-
-
     /*
     * Method: editUser($id)
     * Descriptions : Returns all the users from the database

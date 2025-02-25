@@ -6,24 +6,19 @@ import { useForm } from "@inertiajs/vue3";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 
 const form = useForm({
-    name: "",
-    email: "",
-    password: "",
-    password_confirmation: "",
+    title: "",
+    description: "",
 });
 
 const submit = () => {
-    form.post(route("user.store"), {
-        onFinish: () => {
-            form.reset("password", "password_confirmation");
-        },
+    form.post(route("service.store"), {
     });
 };
 </script>
 <template>
     <AuthenticatedLayout>
         <h1 class="text-4xl font-extrabold text-extrabold text-center">
-            Register
+            Add Service
         </h1>
         <section class="contact-section-wrapper pt-20">
             <div
@@ -31,12 +26,12 @@ const submit = () => {
             >
                 <form @submit.prevent="submit">
                     <div class="w-[100%] flex gap-2">
-                        <InputError class="mt-2" :message="form.errors.name" />
+                        <InputError class="mt-2" :message="form.errors.title" />
                         <TextInput
                             id="name"
                             type="text"
                             class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75"
-                            placeholder="Enter Full Name....."
+                            placeholder="Enter Title....."
                             v-model="form.name"
                             required
                             autofocus
@@ -44,43 +39,20 @@ const submit = () => {
                         />
 
                         <div></div>
-                        <InputError class="mt-2" :message="form.errors.email" />
+                        <InputError class="mt-2" :message="form.errors.description" />
                         <!-- <TextInput class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75" type="text" placeholder="Enter Full Name....."/> -->
                         <TextInput
                             id="email"
                             type="email"
                             class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75"
-                            placeholder="Enter Email....."
+                            placeholder="Enter Description....."
                             v-model="form.email"
                             required
                             autofocus
                             autocomplete="name"
                         />
                     </div>
-                    <div class="w-[100%] flex gap-2 mt-4">
-                        <!-- <input class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75" type="text" placeholder="Enter Company.."> -->
-                        <TextInput
-                            id="password"
-                            type="password"
-                            class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75"
-                            placeholder="Enter Password ...."
-                            v
-                            required
-                            autocomplete="new-password"
-                            v-model="form.password"
-                        />
-                        <TextInput
-                            id="password_confirmation"
-                            type="password"
-                            class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75"
-                            placeholder="Comfirm Password ...."
-                            v-model="form.password_confirmation"
-                            required
-                            autocomplete="new-password"
-                        />
 
-                        <!-- <input class="w-[100%] text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75 " type="text" placeholder="Enter Phone...."> -->
-                    </div>
                     <div class="w-[100%] mt-4">
                         <select
                             id="countries"
