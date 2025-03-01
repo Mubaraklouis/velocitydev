@@ -50,7 +50,10 @@ Route::prefix('dashboard/services')->middleware(['auth'])->group(function(){
 
 
 
-
+/*
+* prefix(services) => return the list of services to the client side
+* method => performing all the services crude
+*/
 Route::prefix('/services')->group(function(){
     require __DIR__ ."/services/client/services.php";
    });
