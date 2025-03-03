@@ -4,8 +4,8 @@ import service from '../Client/service.vue';
 import Title from './partials/Title.vue';
 
 
-defineProps({
-    Services: Object,
+const props = defineProps({
+    services:Array
 })
 
 </script>
@@ -15,9 +15,8 @@ defineProps({
     <GuestLayout>
     <Title class="mt-32"/>
     <div class="services-wrapper">
-    <service/>
-    <service/>
-    <service/>
+    <service  :services="services"/>
+
 </div>
     </GuestLayout>
 
@@ -64,6 +63,7 @@ defineProps({
         gap: 59px;
         margin-left: 91px;
         margin-right: 91px;
+
     }
 }
 </style>

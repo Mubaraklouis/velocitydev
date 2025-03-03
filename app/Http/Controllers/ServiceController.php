@@ -71,6 +71,9 @@ class ServiceController extends Controller
             'image' => $request->image
         ];
 
+        //store the image in the storage
+
+
 
 
         //store service
