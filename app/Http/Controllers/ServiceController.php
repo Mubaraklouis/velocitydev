@@ -102,6 +102,13 @@ class ServiceController extends Controller
         ]);
     }
 
+    public function editService($id, Service $service){
+        $service = $service->find($id);
+        return Inertia::render('services/editService', [
+            'service' => $service
+        ]);
+    }
+
     /**
      * Update the specified resource in storage.
      */
@@ -112,7 +119,6 @@ class ServiceController extends Controller
         $validated=$request->validate([
             'title'=>'required',
             'description'=>'required',
-            'image'=>'required'
         ]
         );
 

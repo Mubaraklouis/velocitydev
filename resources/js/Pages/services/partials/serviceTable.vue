@@ -22,6 +22,8 @@ const multipleDelete = ()=>{
     form.post(route('user.multipleDelete'));
 }
 
+
+
 </script>
 
 
@@ -74,7 +76,6 @@ const multipleDelete = ()=>{
                         </div>
                     </th>
                     <th scope="col" class="px-6 py-3">Title</th>
-                    <th scope="col" class="px-6 py-3">description</th>
                     <th scope="col" class="px-6 py-3">Category</th>
                     <th scope="col" class="px-6 py-3">Action</th>
                 </tr>
@@ -103,7 +104,7 @@ const multipleDelete = ()=>{
                     <td class="px-6 py-4">Technology</td>
 
                     <td class="px-6 py-4">
-                        <Link :href="route('user.edit',service.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit service</Link>
+                        <Link :href="route('service.edit',service.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit service</Link>
                     </td>
                 </tr>
             </tbody>
