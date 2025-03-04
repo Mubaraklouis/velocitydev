@@ -4,21 +4,26 @@ import InputError from "@/Components/InputError.vue";
 import TextInput from "@/Components/TextInput.vue";
 import { useForm } from "@inertiajs/vue3";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
+const props = defineProps({
+    service: Object
+});
+
+console.log(props.service);
 
 const form = useForm({
-    title: "",
-    description: "",
+    title:props.service.title,
+    description:props.service.description,
     image: null,
 });
 
 const submit = () => {
-    form.post(route("service.store"), {});
+    form.put(route("service.update",props.service.id), {});
 };
 </script>
 <template>
     <AuthenticatedLayout>
         <h1 class="text-4xl font-extrabold text-extrabold text-center">
-            Add Service
+            Update a service
         </h1>
         <section class="contact-section-wrapper pt-20">
             <div
@@ -102,7 +107,7 @@ const submit = () => {
                             required
                             autofocus
                             autocomplete="name"
-                            class=" text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none opacity-75 block p-2.5 w-full text-sm text-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            class="text-black text-bold text-sm placeholder-gray-800 bg-gray-200 rounded-lg border-none block p-2.5 w-full text-sm  rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
 
                         ></textarea>
 

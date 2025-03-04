@@ -112,7 +112,7 @@ class ServiceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateServiceRequest $request, Service $service,$id)
+    public function updateService(UpdateServiceRequest $request, Service $service,$id)
     {
         //validate the service
 
@@ -122,10 +122,11 @@ class ServiceController extends Controller
         ]
         );
 
+         $updateService =$service->find($id);
 
-         $service->find($id);
          //update the service
-         $service->update($validated);
+         $updateService->update($validated);
+
             return redirect()->route('services.index');
 
     }
