@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
 use App\Models\Service;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
@@ -140,4 +142,24 @@ class ServiceController extends Controller
         $service->delete();
         return redirect()->route('services.index');
     }
+
+
+    public function multipleDelete(Request $request){
+
+
+
+
+
+
+        $request->validate([
+            'ids' => 'required|array',
+            'ids.*' => 'integer|exists:services,id' // Ensure each ID exists in 'posts' table
+        ]);
+
+
+            // Delete records where the ID is in the given array
+            Service::whereIn('id', $request->ids)->delete();
+
+            return  Redirect::back();
+}
 }

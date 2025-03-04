@@ -12,7 +12,6 @@ const props = defineProps({
 <template>
 
 <div >
-
     <div>
 <!-- ✅ Grid Section - Starts Here 👇 -->
 <section id="Projects"

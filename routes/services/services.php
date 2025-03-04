@@ -16,5 +16,6 @@ Route::post('/service/store',[ServiceController::class,'store'])->name('service.
 Route::get('/service/edit/{id}',[ServiceController::class,'editService'])->name('service.edit');
 Route::put('/service/update/{id}',[ServiceController::class,'updateService'])->name('service.update');
 Route::delete('/service/delete/{id}',[ServiceController::class,'deleteService'])->name('service.delete');
+Route::post('multiple-delete',[ServiceController::class,'multipleDelete'])->name('service.multipleDelete');
 
 
