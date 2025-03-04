@@ -2,11 +2,7 @@
 
 <script setup >
 import { Link } from '@inertiajs/vue3';
-import pagination from '@/customComponenents/pagination/pagination.vue'
-import moment from 'moment';
-import {useForm} from '@inertiajs/vue3';
-import { initFlowbite } from "flowbite";
-import UserProfileAvator from '@/Pages/users/partials/userProfileAvator.vue';
+import servicePagination from './servicePagination.vue';
 
 
 
@@ -94,7 +90,7 @@ const multipleDelete = ()=>{
                         </div>
                     </td>
                     <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                        <img class="w-10 h-10 rounded-full" :src="service.profile_picture" alt="Jese image" />
+                        <img class="w-10 h-10 rounded-full" :src="service.image" alt="Jese image" />
                         <div class="ps-3">
                             <div class="text-base font-semibold">
                                 {{ service.title }}
@@ -114,5 +110,7 @@ const multipleDelete = ()=>{
         </table>
     </div>
 
-<!-- <pagination :s="users"/> -->
+
+<servicePagination :services="services" />
+
 </template>

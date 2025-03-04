@@ -2,6 +2,7 @@
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import service from '../Client/service.vue';
 import Title from './partials/Title.vue';
+import ServicePagination from '../services/partials/servicePagination.vue';
 
 
 const props = defineProps({
@@ -14,8 +15,12 @@ const props = defineProps({
 <template>
     <GuestLayout>
     <Title class="mt-32"/>
-    <div class="services-wrapper">
+    <div>
     <service  :services="services"/>
+
+  <div class="flex justify-center">
+    <ServicePagination :services="services"/>
+  </div>
 
 </div>
     </GuestLayout>

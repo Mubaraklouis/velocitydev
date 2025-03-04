@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
 use App\Models\Service;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class ServiceController extends Controller
@@ -73,14 +74,22 @@ class ServiceController extends Controller
 
         //store the image in the storage
 
+         // Check if the file exists in the request
+         if ($request->hasFile('image')) {
+            $file = $request->file('image');
 
+            // Store the file in the 'public' disk under the 'profile-pictures' directory
+            $path = $file->store('services-pictures', 'public');
 
+            $filePath = Storage::disk('public')->url($path);
 
         //store service
-
+        $service['image'] = $filePath;
         Service::create($service);
         return redirect()->route('services.index');
     }
+
+}
 
     /**
      * Display the specified resource.

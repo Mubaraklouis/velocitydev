@@ -1,4 +1,8 @@
 <script setup>
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+
+PrimaryButton
+
 const props = defineProps({
    services:Array
 })
@@ -6,21 +10,53 @@ const props = defineProps({
 </script>
 
 <template>
-<div v-for="service in services.data" :key="service.id" class="max-w-sm bg-[#CFACAC] border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mt-10">
-    <a href="#">
-        <img class="rounded-t-lg" src="/software.jpg" alt="" />
-    </a>
-    <div class="p-5">
+
+<div >
+
+    <div>
+<!-- ✅ Grid Section - Starts Here 👇 -->
+<section id="Projects"
+
+    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+
+    <!--   ✅ Product card 1 - Starts Here 👇 -->
+    <div
+     v-for="service in services.data"
+    :key="service.id"
+     class="w-72 bg-[#f9d6d6] shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl ">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ service.title }}</h5>
+            <img :src="service.image"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">{{ service.title }}</p>
+                <div class="flex items-center">
+
+                        <p class="text-sm text-gray-600  mt-4">{{ service.description }}</p>
+                </div>
+                <div class="flex items-center justify-between mt-10 mb-4">
+
+
+                    <a href="" class="flex items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex items-center">
+    <span>
+        View More
+    </span>
+    <svg  fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        viewBox="0 0 24 24" class="w-6 h-6 ml-2">
+        <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+    </svg>
+</a>
+
+
+                </div>
+            </div>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ service.description }}.</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
+    </div>
+
+
+
+</section>
+
     </div>
 </div>
 </template>

@@ -8,7 +8,7 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 const form = useForm({
     title: "",
     description: "",
-    image: "",
+    image: null,
 });
 
 const submit = () => {
@@ -68,7 +68,7 @@ const submit = () => {
                                     </p>
                                 </div>
                                 <input
-                                    onhcange="form.image = $event.target.files[0]"
+                                    @input="form.image = $event.target.files[0]"
                                     id="dropzone-file"
                                     type="file"
                                     class="hidden"
