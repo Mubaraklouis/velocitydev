@@ -5,46 +5,53 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreContactRequest;
 use App\Http\Requests\UpdateContactRequest;
 use App\Models\Contact;
+use Inertia\Inertia;
 
 class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @return  list of contacts in a table
      */
     public function index()
     {
-        //
+        $contact = Contact::latest()->paginate(6);
+
+        return Inertia::render('');
+
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created contact in the datbase in storage.
+     * @return mixed
      */
     public function store(StoreContactRequest $request)
     {
-        //
+
+        $contact = $request->validate([
+            'full_name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'message' => 'required',
+            'country' => 'required'
+        ]);
+
+        $contact = [
+            'full_name' => $request->full_name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
+            'country' => $request->country,
+            'company' => $request->company
+
+        ];
+
+        //store the contact in the database
+
+        Contact::create($contact);
+
+        return redirect()->back()->with('success', 'Contact created successfully');
+
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateContactRequest $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Contact $contact)
-    {
-        //
-    }
 }

@@ -58,5 +58,13 @@ Route::prefix('/services')->group(function(){
     require __DIR__ ."/services/client/services.php";
    });
 
+   /*
+* prefix(contacts) => this contact routes that belongs to contact featur
+* method => performing all the contact crude
+*/
+Route::prefix('/contacts')->group(function(){
+    require __DIR__ ."/contact/contacts.php";
+   });
+
 
 require __DIR__.'/auth.php';

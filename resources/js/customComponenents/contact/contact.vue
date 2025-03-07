@@ -1,5 +1,23 @@
 <script setup>
 import PrimaryButton from '@/customComponenents/primary-button.vue';
+import { useForm } from '@inertiajs/vue3';
+
+
+const form = useForm({
+    message:'',
+    email:'',
+    full_name:'',
+    country:'',
+    company:'',
+    phone:'',
+})
+
+//submit the form
+
+const submit = ()=>{
+    form.post(route('contact.store'));
+}
+
 </script>
 
 <template>
@@ -26,18 +44,19 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
     </div>
 
     <div class="contact-form w-[80%] mx-auto ">
+        <form @submit.prevent="submit">
      <div class="w-[100%] flex gap-2 ">
-        <input class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75" type="text" placeholder="Enter Full Name.....">
-        <input class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75 " type="text" placeholder="Enter Email....">
+        <input v-model="form.full_name" class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75" type="text" placeholder="Enter Full Name.....">
+        <input v-model="form.email" class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75 " type="text" placeholder="Enter Email....">
      </div>
      <div class="w-[100%] flex gap-2 mt-4 ">
-        <input class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75" type="text" placeholder="Enter Company..">
-        <input class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75 " type="text" placeholder="Enter Phone....">
+        <input v-model="form.company" class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75" type="text" placeholder="Enter Company..">
+        <input v-model="form.phone" class="w-[100%] text-bold text-sm placeholder-gray-800 bg-[#CFACAC] rounded-lg border-none opacity-75 " type="text" placeholder="Enter Phone....">
      </div>
      <div class="w-[100%]  mt-4 ">
 
 
-  <select id="countries" class="bg-[#CFACAC] opacity-75 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <select v-model="form.country" id="countries" class="bg-[#CFACAC] opacity-75 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     <option selected>Choose a country</option>
     <option value="US">United States</option>
     <option value="CA">Canada</option>
@@ -45,7 +64,7 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
     <option value="DE">Germany</option>
   </select>
 
-        <input class=" h-20 w-[100%] text-bold text-xsm placeholder-gray-800 bg-[#CFACAC] mt-4 rounded-lg border-none opacity-75" type="text" placeholder="Start typing..">
+        <input v-model="form.message" class=" h-20 w-[100%] text-bold text-xsm placeholder-gray-800 bg-[#CFACAC] mt-4 rounded-lg border-none opacity-75" type="text" placeholder="Start typing..">
 
 
 
@@ -60,9 +79,12 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
     <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
 </div>
 
-<PrimaryButton title="Send"/>
+<button>
+    <PrimaryButton title="Send"/>
+</button>
 
      </div>
+    </form>
     </div>
 </section>
 
