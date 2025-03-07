@@ -43,7 +43,10 @@ class HandleInertiaRequests extends Middleware
                 'user' => $request->user(),
 
             ],
-            "usersCount"=>User::count()
+            "usersCount"=>User::count(),
+            'flash' => [
+                'success' => $request->session()->get('success'),
+            ],
         ];
 
     }

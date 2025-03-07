@@ -1,6 +1,7 @@
 <script setup>
 import PrimaryButton from '@/customComponenents/primary-button.vue';
 import { useForm } from '@inertiajs/vue3';
+import SuccessAlert from '../successAlert.vue';
 
 
 const form = useForm({
@@ -22,6 +23,9 @@ const submit = ()=>{
 
 <template>
  <section class="contact-section-wrapper">
+
+
+
     <h1
             class="mt-10 ml-10 mb-10 text-4xl font-extrabold  text-extrabold"
         >
