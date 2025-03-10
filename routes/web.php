@@ -62,7 +62,7 @@ Route::prefix('/services')->group(function(){
 * prefix(contacts) => this contact routes that belongs to contact featur
 * method => performing all the contact crude
 */
-Route::prefix('/contacts')->group(function(){
+Route::prefix('dashboard/contacts')->group(function(){
     require __DIR__ ."/contact/contacts.php";
    });
 

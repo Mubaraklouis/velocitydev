@@ -11,13 +11,15 @@ class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * @return  list of contacts in a table
+     * @return  mixed of contacts in a table
      */
     public function index()
     {
         $contact = Contact::latest()->paginate(6);
 
-        return Inertia::render('');
+        return Inertia::render('contact/contacts', [
+            'contacts' => $contact
+        ]);
 
     }
 
