@@ -33,8 +33,8 @@ const logout = ()=>{
             </div>
             <div class="flex flex-col flex-1 overflow-y-auto">
                 <nav class="flex-1 px-2 py-4 bg-gray-800">
-                    <a
-                        href="#"
+                    <Link :href="route('contact.index')"
+
                         class="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700"
                     >
                         <svg
@@ -51,7 +51,7 @@ const logout = ()=>{
                             />
                         </svg>
                         Contacts
-                    </a>
+                    </Link>
                     <Link
                         :href="route('users.index')"
                         class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700"
@@ -299,7 +299,7 @@ const logout = ()=>{
                                     <h4
                                         class="text-2xl font-semibold text-gray-700"
                                     >
-                                        3453
+                                    {{ $page.props.contactsCount }}
                                     </h4>
                                     <div class="text-gray-500">
                                         Total Contacts

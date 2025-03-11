@@ -1,4 +1,5 @@
 <script setup>
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import ContactTable from './partials/contactTable.vue';
 
 defineProps({
@@ -9,5 +10,9 @@ defineProps({
 </script>
 
 <template>
-    <ContactTable :contacts="contacts"/>
+
+    <AuthenticatedLayout>
+        <ContactTable :contacts="contacts"/>
+    </AuthenticatedLayout>
+
 </template>

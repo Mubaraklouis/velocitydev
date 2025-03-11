@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -44,6 +45,7 @@ class HandleInertiaRequests extends Middleware
 
             ],
             "usersCount"=>User::count(),
+            "contactsCount"=>Contact::count(),
             'flash' => [
                 'success' => $request->session()->get('success'),
             ],
