@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreContactRequest;
 use App\Http\Requests\UpdateContactRequest;
+use App\Mail\ContactRecieveMail;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
 class ContactController extends Controller
@@ -51,6 +53,9 @@ class ContactController extends Controller
         //store the contact in the database
 
         Contact::create($contact);
+
+        //send email to the client that thier email has been recieved
+        Mail::to($request->email)->send(new ContactRecieveMail($contact));
 
         return redirect()->back()->with('success', 'Contact created successfully');
 
