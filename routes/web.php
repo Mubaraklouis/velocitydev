@@ -64,8 +64,17 @@ Route::prefix('/services')->group(function(){
 */
 Route::prefix('dashboard/contacts')->group(function(){
     require __DIR__ ."/contact/contacts.php";
-    
+
    });
+
+/* prefix(contacts) => this contact routes that belongs to contact featur
+* method => performing all the contact crude
+*/
+
+Route::prefix('dashboard/notifications')->group(function(){
+    require __DIR__ ."/notification/notification.php";
+   });
+
 
 
 require __DIR__.'/auth.php';

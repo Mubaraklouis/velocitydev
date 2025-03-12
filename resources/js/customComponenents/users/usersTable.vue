@@ -3,8 +3,7 @@ import { Link } from '@inertiajs/vue3';
 import pagination from '@/customComponenents/pagination/pagination.vue'
 import moment from 'moment';
 import {useForm} from '@inertiajs/vue3';
-import { initFlowbite } from "flowbite";
-import UserProfileAvator from '@/Pages/users/partials/userProfileAvator.vue';
+
 
 
 
