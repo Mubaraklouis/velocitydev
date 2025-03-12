@@ -63,8 +63,7 @@ class ContactController extends Controller
         $client = Contact::where('email',$contact['email'])->first();
 
         //find the user to send the email to
-        $email = env('MAIL_FROM_ADDRESS');
-        $admin = User::where('email',$email)->first();
+        $admin = User::find(1);
         $admin->notify(new contactReceiveNotification($client));
 
         return redirect()->back()->with('success', 'Contact created successfully');

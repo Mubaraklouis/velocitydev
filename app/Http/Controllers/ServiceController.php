@@ -143,13 +143,7 @@ class ServiceController extends Controller
         return redirect()->route('services.index');
     }
 
-
     public function multipleDelete(Request $request){
-
-
-
-
-
 
         $request->validate([
             'ids' => 'required|array',
