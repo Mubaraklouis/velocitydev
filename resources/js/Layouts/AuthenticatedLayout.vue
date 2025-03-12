@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import ApplicationLogo from "@/Components/ApplicationLogo.vue";
-import Dropdown from "@/Components/Dropdown.vue";
-import DropdownLink from "@/Components/DropdownLink.vue";
-import NavLink from "@/Components/NavLink.vue";
-import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
 import { Link, router } from "@inertiajs/vue3";
 import UserProfileAvator from "@/Pages/users/partials/userProfileAvator.vue";
 
@@ -38,7 +33,6 @@ const logout = () => {
                         class="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700">
 
                         <img class="w-5 h-5 mr-3 " src="/notification.png"/>
-
              Notifications
                     </Link>
 
