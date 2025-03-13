@@ -39,10 +39,10 @@ class contactReceiveNotification extends Notification
         return (new MailMessage)
         ->subject('New Client Request')
         ->line('A new client has made a request.')
-        ->line('Client Name:   ' . $this->client->full_name)
-        ->line('Email  '.$this->client->email)
-        ->line('Phone Number  '.$this->client->phone)
-        ->line('Request Details: ' . $this->client->message)
+        ->line('Client Name:   ' . $this->client['full_name'])
+        ->line('Email  '.$this->client['email'])
+        ->line('Phone Number  '.$this->client['phone'])
+        ->line('Request Details: ' . $this->client['message'])
         ->line('Thank you for using our application!');
     }
 

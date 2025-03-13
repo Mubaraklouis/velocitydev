@@ -60,7 +60,7 @@ class ContactController extends Controller
         Mail::to($request->email)->send(new ContactRecieveMail($contact));
 
         //send the email to the admin that a client  that a cleint send a request
-        $client = Contact::where('email',$contact['email'])->first();
+        $client = $contact;
 
         //find the user to send the email to
         $admin = User::find(1);
