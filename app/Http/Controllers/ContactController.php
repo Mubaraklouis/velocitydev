@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreContactRequest;
+use App\Jobs\SendContactEmailJob;
 use App\Models\Contact;
 use App\Models\User;
-use App\Notifications\contactReceiveNotification;
-use App\services\Emailservice as ServicesEmailservice;
 use Inertia\Inertia;
 
 class ContactController extends Controller
@@ -53,16 +52,9 @@ class ContactController extends Controller
         //store the contact in the database
 
         Contact::create($contact);
+         // Dispatch the job to send emails  to the queue
+         SendContactEmailJob::dispatch($request->email, $contact);
 
-        //resolve the sending email service
-        $emailService = app( ServicesEmailservice::class,[
-            'email'=>$request->email,
-            'client'=>$contact
-        ]);
-        //send email to the client
-        $emailService->sendCleintEmail();
-        //send the email to the admin that a client  that a cleint send a request
-        $emailService->sendAdminEmail();
 
         return redirect()->back()->with('success', 'Contact created successfully');
 
