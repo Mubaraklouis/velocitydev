@@ -3,14 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreContactRequest;
-use App\Http\Requests\UpdateContactRequest;
-use App\Mail\ContactRecieveMail;
 use App\Models\Contact;
 use App\Models\User;
 use App\Notifications\contactReceiveNotification;
 use App\services\Emailservice as ServicesEmailservice;
-use Emailservice;
-use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
 class ContactController extends Controller
@@ -58,18 +54,15 @@ class ContactController extends Controller
 
         Contact::create($contact);
 
-        //send email to the client that thier email has been recieved by resolving the email servic class
+        //resolve the sending email service
         $emailService = app( ServicesEmailservice::class,[
             'email'=>$request->email,
             'client'=>$contact
         ]);
+        //send email to the client
         $emailService->sendCleintEmail();
         //send the email to the admin that a client  that a cleint send a request
-        $client = $contact;
-
-        //find the user to send the email to
-        $admin = User::find(1);
-        $admin->notify(new contactReceiveNotification($client));
+        $emailService->sendAdminEmail();
 
         return redirect()->back()->with('success', 'Contact created successfully');
 

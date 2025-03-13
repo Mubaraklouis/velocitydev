@@ -11,6 +11,8 @@ namespace App\services;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactRecieveMail;
+use App\Models\User;
+use App\Notifications\contactReceiveNotification;
 
 class Emailservice{
     public $email;
@@ -26,6 +28,13 @@ class Emailservice{
     public function sendCleintEmail(){
          //send email to the client that thier email has been recieved
          Mail::to($this->email)->send(new ContactRecieveMail($this->client));
+
+    }
+
+    public function sendAdminEmail(){
+        //find the user to send the email to
+        $admin = User::find(1);
+        $admin->notify(new contactReceiveNotification($this->client));
 
     }
 
