@@ -13,11 +13,7 @@ class CalculatorServiceProvider extends ServiceProvider
     public function register(): void
     {
 
-        $this->app->bind(\App\Services\Calculator::class,function($app){
-
-            return new \App\Services\Calculator();
-
-        });
+    
     }
 
     /**

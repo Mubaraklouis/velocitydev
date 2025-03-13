@@ -8,6 +8,8 @@ use App\Mail\ContactRecieveMail;
 use App\Models\Contact;
 use App\Models\User;
 use App\Notifications\contactReceiveNotification;
+use App\services\Emailservice as ServicesEmailservice;
+use Emailservice;
 use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
@@ -56,9 +58,12 @@ class ContactController extends Controller
 
         Contact::create($contact);
 
-        //send email to the client that thier email has been recieved
-        Mail::to($request->email)->send(new ContactRecieveMail($contact));
-
+        //send email to the client that thier email has been recieved by resolving the email servic class
+        $emailService = app( ServicesEmailservice::class,[
+            'email'=>$request->email,
+            'client'=>$contact
+        ]);
+        $emailService->sendCleintEmail();
         //send the email to the admin that a client  that a cleint send a request
         $client = $contact;
 
