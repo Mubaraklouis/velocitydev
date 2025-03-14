@@ -8,7 +8,6 @@ PrimaryButton
 <nav class="bg-[#FCE2E2] dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <Link href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"> -->
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Malga</span>
   </Link>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -30,13 +29,13 @@ PrimaryButton
         <a href="#" class="block py-2 px-3 text-white font-bold rounded-sm md:bg-transparent md:text-black md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <Link :href="route('about.index')" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
       </li>
       <li>
         <Link href="/services" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</Link>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Team</a>
+        <a href="#" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Portfolio</a>
       </li>
       <li>
         <Link href="register" class="block py-2 px-3 text-white font-bold md:text-black rounded-sm hover:bg-[#362F95] md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign up</Link>

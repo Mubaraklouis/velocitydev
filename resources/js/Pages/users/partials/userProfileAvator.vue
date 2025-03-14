@@ -66,9 +66,9 @@ const logout = ()=>{
                     </svg>
 
 
-                    <a href="http://127.0.0.1:8000/user/settings">
+                    <Link :href="route('about.create')">
                         Settings
-                    </a>
+                    </Link>
                 </li>
 
 

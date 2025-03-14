@@ -75,6 +75,21 @@ Route::prefix('dashboard/notifications')->group(function(){
     require __DIR__ ."/notification/notification.php";
    });
 
+/* prefix(contacts) => this contact routes that belongs to contact featur
+* method => performing all the about crude
+*/
+
+Route::prefix('about')->group(function(){
+    require __DIR__ ."/about/about.php";
+   });
+
+   /* prefix(contacts) => this contact routes that belongs to contact featur
+* method => performing all the setting crude
+*/
+
+Route::prefix('dashboard/setting')->group(function(){
+    require __DIR__ ."/setting/setting.php";
+   });
 
 
 require __DIR__.'/auth.php';

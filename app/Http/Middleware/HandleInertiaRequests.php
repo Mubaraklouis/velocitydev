@@ -48,6 +48,7 @@ class HandleInertiaRequests extends Middleware
             "contactsCount"=>Contact::count(),
             'flash' => [
                 'success' => $request->session()->get('success'),
+                'error' => $request->session()->get('error'),
             ],
         ];
 

@@ -65,24 +65,15 @@ const logout = () => {
                     Services
                     </Link>
 
-                    <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
+                    <Link :href="route('about.create')" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round"
                                 d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
                         </svg>
 
-                        Blog
-                    </a>
-
-                    <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        Settings
-                    </a>
+                        About
+                    </Link>
                     <UserProfileAvator class="items-bottom" />
                 </nav>
             </div>
@@ -139,8 +130,6 @@ const logout = () => {
                     </div>
                 </div>
             </div>
-
-
 
             <div class="p-10">
                 <div class="m-6">
