@@ -2,7 +2,7 @@
 import Glow from '@/customComponenents/glow.vue';
 import PrimaryButton from '@/customComponenents/primary-button.vue';
 import SuccessAlert from '@/customComponenents/successAlert.vue';
-import { usePage } from '@inertiajs/vue3';
+import { usePage ,Link} from '@inertiajs/vue3';
 // Access the success message from the page props
 
 
@@ -31,7 +31,9 @@ import { usePage } from '@inertiajs/vue3';
                 elevate your brand with custom Tees,Graphic Design and Trading solutions
             </p>
             <div class="mt-4">
-             <PrimaryButton title="Explore More"/>
+            <Link href="/services">
+                <PrimaryButton title="Explore More"/>
+            </Link>
             </div>
 
 

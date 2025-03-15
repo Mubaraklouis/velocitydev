@@ -1,27 +1,35 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-import service from '../Client/service.vue';
-import Title from './partials/Title.vue';
-import ServicePagination from '../services/partials/servicePagination.vue';
+import portfolio from './portfolio.vue';
+import Title from '../partials/Title.vue';
+import ServicePagination from '@/Pages/services/partials/servicePagination.vue';
+
+
 
 
 const props = defineProps({
-    services:Array
+    projects:Array
 })
 
 </script>
+
+
 <template>
     <GuestLayout>
     <Title class="mt-32"/>
     <div>
-    <service  :services="services"/>
+
+
+<portfolio :projects="projects"/>
 
   <div class="flex justify-center">
-    <ServicePagination :services="services"/>
+    <ServicePagination :services="projects"/>
   </div>
 
 </div>
     </GuestLayout>
+
+
 </template>
 
 <style>

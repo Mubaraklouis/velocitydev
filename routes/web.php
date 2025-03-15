@@ -91,5 +91,30 @@ Route::prefix('dashboard/setting')->group(function(){
     require __DIR__ ."/setting/setting.php";
    });
 
+   /* prefix(contacts) => this contact routes that belongs to contact featur
+* method => performing all the portfolio crude
+*/
+
+Route::prefix('/portfolio')->group(function(){
+    require __DIR__ ."/portfolio/client/portfolio.php";
+   });
+
+      /* prefix(contacts) => this contact routes that belongs to contact featur
+* method => performing all the portfolio from admin side crude
+*/
+
+   Route::prefix('/projects')->group(function(){
+    require __DIR__ ."/portfolio/portfolio.php";
+   });
+
+
+
+         /* prefix(contacts) => this contact routes that belongs newsletter feature
+* method => performing all the portfolio from admin side crude
+*/
+
+Route::prefix('/')->group(function(){
+    require __DIR__ ."/newsletter/newsletter.php";
+   });
 
 require __DIR__.'/auth.php';

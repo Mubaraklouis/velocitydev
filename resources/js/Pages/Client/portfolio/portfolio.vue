@@ -4,7 +4,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 PrimaryButton
 
 const props = defineProps({
-   services:Array
+   projects:Array
 })
 
 </script>
@@ -18,19 +18,20 @@ const props = defineProps({
 
     class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-8 mt-10 mb-5">
 
+
     <div
-     v-for="service in services.data"
-    :key="service.id"
+     v-for="project in projects.data"
+    :key="project.id"
      class="bg-[#fceded] relative flex flex-col my-2 shadow-sm border border-slate-200 rounded-lg w-96">
   <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-    <img :src="service.image" alt="card-image" />
+    <img :src="project.image" alt="card-image" />
   </div>
   <div class="p-4">
     <h6 class="mb-2 text-slate-800 text-xl font-semibold">
-        {{ service.title }}
+        {{ project.title }}
     </h6>
     <p class="text-slate-600 leading-normal font-light">
-        {{ service.description }}
+        {{ project.description }}
     </p>
   </div>
   <div class="px-4 pb-4 pt-0 mt-2">

@@ -38,9 +38,6 @@
 
   </div>
 
-
-
-
         <h2 class="mt-6 text-gray-700 dark:text-gray-200">{{ $contact['full_name'] }},</h2>
 
        <p>Thank you for reaching out to us! We have received your message and appreciate you taking the time to contact us.</p>
