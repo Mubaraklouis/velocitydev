@@ -55,44 +55,48 @@ class ServiceController extends Controller
      * Store a newly created service in the database storage.
      * @return : null
      */
-
     public function store(StoreServiceRequest $request)
     {
-
-
-        //validate the user requests
+        // Validate the user requests
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            // 'image'=>'required'
+            // 'image' => 'required' // Uncomment if the image is required
         ]);
 
-        //create the service in the database
+        // Initialize the service array
         $service = [
             'title' => $request->title,
             'description' => $request->description,
-            'image' => $request->image
+            'image' => null, // Default to null if no image is uploaded
         ];
 
-        //store the image in the storage
-
-         // Check if the file exists in the request
-         if ($request->hasFile('image')) {
+        // Check if the file exists in the request
+        if ($request->hasFile('image')) {
             $file = $request->file('image');
 
-            // Store the file in the 'public' disk under the 'profile-pictures' directory
-            $path = $file->store('services-pictures', 'public');
+            // Store the file in the 'services-pictures' directory on the S3 disk
+            $path = $file->store('services-pictures', [
+                "disk"=>"s3",
+                "visibility"=>"public"
 
-            $filePath = Storage::disk('public')->url($path);
+            ]);
 
-        //store service
-        $service['image'] = $filePath;
+
+
+            // Get the full URL of the uploaded file
+            $filePath = Storage::disk('s3')->url($path);
+
+            // Add the image URL to the service array
+            $service['image'] = $filePath;
+        }
+
+        // Store the service in the database
         Service::create($service);
+
+        // Redirect to the services index page
         return redirect()->route('services.index');
     }
-
-}
-
     /**
      * Display the specified resource.
      */

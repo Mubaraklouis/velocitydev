@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreNewsletterRequest;
 use App\Http\Requests\UpdateNewsletterRequest;
+use App\Jobs\NewsletterSubscribeJob;
 use App\Models\Newsletter;
+use App\Services\NewsletterService;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class NewsletterController extends Controller
@@ -20,9 +23,14 @@ class NewsletterController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function subscribe(Request $request)
     {
-        //
+        $email = $request->email;
+
+        NewsletterSubscribeJob::dispatch($email);
+
+        return redirect()->back()->with('success', 'Thanks for subscribing!');
+
     }
 
     /**

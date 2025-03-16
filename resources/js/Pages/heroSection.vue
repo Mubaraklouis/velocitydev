@@ -4,25 +4,10 @@ import PrimaryButton from '@/customComponenents/primary-button.vue';
 import SuccessAlert from '@/customComponenents/successAlert.vue';
 import { usePage ,Link} from '@inertiajs/vue3';
 // Access the success message from the page props
-
-
-
-
-
 </script>
-
 <template>
-
-
-
-
-
 <section class="ml-10 hero-section-wrapper  mt-32 ">
-
-
    <div>
-
-
     <div class="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5" data-aos="fade-right" data-aos-duration="800">
           <div class="pr-2 md:mb-14 py-14 md:py-0">
             <h1 class="text-3xl font-semibold text-blue-900 xl:text-5xl lg:text-3xl"><span class="block w-full">Design Your Dream !</span></h1>

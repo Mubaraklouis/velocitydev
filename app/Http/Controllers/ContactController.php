@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreContactRequest;
 use App\Jobs\SendContactEmailJob;
 use App\Models\Contact;
-use App\Models\User;
 use Inertia\Inertia;
 
 class ContactController extends Controller
