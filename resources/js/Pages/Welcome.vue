@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 
 import navbar from "@/customComponenents/navigationBar/navbar.vue";
 import heroSection from "./heroSection.vue";
@@ -14,44 +14,44 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
 </script>
 <template>
     <section class="mainSection">
-        <navbar/>
-        <hero-section/>
-        <Services/>
-        <Portfolio/>
-        <portfolio2/>
-        <Testimonial/>
-        <Contact/>
+        <navbar />
+        <hero-section />
+        <Services />
+        <Portfolio />
+        <portfolio2 />
+
+        <Testimonial :testimonialsFirstBatch="$page.props.testimonialsFirstBatch"
+            :testimonialsSecondBatch="$page.props.testimonialsSecondBatch"
+            :testimonialsThirdBatch="$page.props.testimonialsThirdBatch" />
+
+        <Contact />
         <!-- <team/> -->
-        <Footer/>
+        <Footer />
     </section>
 
 </template>
 <style>
 /*here is all the variable that will be used globally in the project*/
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
 
-:root{
-    --primaryColor:#FCE2E2;
-    --secondaryColor:#363092;
-    --inputColor:#CFACAC;
-    --mediumScreenMargin:3.75rem 0,7.5rem 7.5rem;
+:root {
+    --primaryColor: #FCE2E2;
+    --secondaryColor: #363092;
+    --inputColor: #CFACAC;
+    --mediumScreenMargin: 3.75rem 0, 7.5rem 7.5rem;
 }
 
-body{
+body {
     background-color: var(--primaryColor);
 }
+
 /* .mainSection{
     margin:3.75rem;
 } */
 
 /* here is where all the code belonging the fonts of the website  */
 /* mobile margin  */
-
-
-
 </style>
-
-

@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\Contact;
+use App\Models\Testimonial;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -50,6 +51,9 @@ class HandleInertiaRequests extends Middleware
                 'success' => $request->session()->get('success'),
                 'error' => $request->session()->get('error'),
             ],
+            'testimonialsFirstBatch'=>Testimonial::latest()->take(4)->get(),
+            'testimonialsSecondBatch'=>Testimonial::latest()->skip(5)->take(4)->get(),
+            'testimonialsThirdBatch'=>Testimonial::latest()->skip(10)->take(5)->get()
         ];
 
     }

@@ -1,6 +1,20 @@
+
+<script setup>
+
+
+
+defineProps(
+    {
+        testimonialsFirstBatch:Array,
+        testimonialsSecondBatch:Array,
+        testimonialsThirdBatch:Array
+    }
+)
+
+
+</script>
+
 <template>
-
-
 
 
 
@@ -37,7 +51,7 @@
 
 
             <ul class="space-y-8">
-                <li class="text-sm leading-6">
+                <li v-for="testimonial in testimonialsFirstBatch" class="text-sm leading-6">
                     <div class="relative group">
                         <div
                             class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
@@ -45,19 +59,21 @@
                             <div
                                 class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
                                 <div class="flex items-center space-x-4"><img
-                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
-                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
+                                        :src="testimonial.image"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" :alt="testimonial.name">
                                     <div>
-                                        <h3 class="text-lg font-bold text-white ">Kanye West</h3>
-                                        <p class=" text-white text-md">Rapper &amp; Entrepreneur</p>
+                                        <h3 class="text-lg font-bold text-white ">{{ testimonial.name }}</h3>
+                                        <p class=" text-white text-md">{{ testimonial.title }}</p>
                                     </div>
                                 </div>
-                                <p class="leading-normal text-white text-md">Find God.</p>
+                                <p class="leading-normal text-white text-md">{{ testimonial.message }}</p>
                             </div>
                         </a>
                     </div>
                 </li>
-                <li class="text-sm leading-6">
+
+
+                <!-- <li class="text-sm leading-6">
                     <div class="relative group">
                         <div
                             class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
@@ -78,8 +94,8 @@
                             </div>
                         </a>
                     </div>
-                </li>
-                <li class="text-sm leading-6">
+                </li> -->
+                <!-- <li class="text-sm leading-6">
                     <div class="relative group">
                         <div
                             class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
@@ -98,8 +114,8 @@
                             </div>
                         </a>
                     </div>
-                </li>
-                <li class="text-sm leading-6">
+                </li> -->
+                <!-- <li class="text-sm leading-6">
                     <div class="relative group">
                         <div
                             class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
@@ -120,11 +136,192 @@
                             </div>
                         </a>
                     </div>
-                </li>
+                </li> -->
             </ul>
 
 
-            <ul class="hidden space-y-8 sm:block">
+            <ul class="space-y-8">
+                <li v-for="testimonial in testimonialsThirdBatch" class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        :src="testimonial.image"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" :alt="testimonial.name">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">{{ testimonial.name }}</h3>
+                                        <p class=" text-white text-md">{{ testimonial.title }}</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">{{ testimonial.message }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                <!-- <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">Tim Cook</h3>
+                                        <p class=" text-white text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li> -->
+                <!-- <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">Kanye West</h3>
+                                        <p class=" text-white text-md">Rapper &amp; Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">Find God.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li> -->
+                <!-- <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">Tim Cook</h3>
+                                        <p class=" text-white text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li> -->
+            </ul>
+
+
+            <ul class="space-y-8">
+                <li v-for="testimonial in testimonialsSecondBatch" class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        :src="testimonial.image"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" :alt="testimonial.name">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">{{ testimonial.name }}</h3>
+                                        <p class=" text-white text-md">{{ testimonial.title }}</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">{{ testimonial.message }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+                <!-- <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">Tim Cook</h3>
+                                        <p class=" text-white text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li> -->
+                <!-- <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">Kanye West</h3>
+                                        <p class=" text-white text-md">Rapper &amp; Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">Find God.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li> -->
+                <!-- <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg  bg-[#2e297d] ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white ">Tim Cook</h3>
+                                        <p class=" text-white text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-white text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li> -->
+            </ul>
+
+
+
+            <!-- <ul class="hidden space-y-8 sm:block">
                 <li class="text-sm leading-6">
                     <div class="relative group">
                         <div
@@ -213,10 +410,10 @@
                         </a>
                     </div>
                 </li>
-            </ul>
+            </ul> -->
 
 
-            <ul class="hidden space-y-8 lg:block">
+            <!-- <ul class="hidden space-y-8 lg:block">
                 <li class="text-sm leading-6">
                     <div class="relative group">
                         <div
@@ -303,7 +500,7 @@
                         </a>
                     </div>
                 </li>
-            </ul>
+            </ul> -->
 
 
         </div>

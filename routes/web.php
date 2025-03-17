@@ -117,4 +117,14 @@ Route::prefix('/')->group(function(){
     require __DIR__ ."/newsletter/newsletter.php";
    });
 
+
+            /* prefix(testimonial) => this is testimonial  routes that belongs testinmonial feature
+* method => performing all the portfolio from admin side crude
+*/
+
+Route::prefix('/testimonials')->group(function(){
+    require __DIR__ ."/testimonials/testimonial.php";
+   });
+
+
 require __DIR__.'/auth.php';

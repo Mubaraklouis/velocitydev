@@ -11,24 +11,16 @@ defineProps({
 
 const form = useForm({
     email:''
-
 });
-
 const submit = ()=>{
 
     form.post(route('newsletter.subscribe'));
     form.reset()
-
 }
 
 </script>
-
 <template>
-
  <GuestLayout>
-
-
-
     <div>
         <div class="flex justify-center mt-20">
     <SuccessAlert v-if="$page.props.flash.success" :message="$page.props.flash.success "/>
@@ -65,13 +57,9 @@ const submit = ()=>{
                 </radialGradient>
             </defs>
         </svg>
-
     </div>
 </div>
-
-
     </div>
-
  </GuestLayout>
 </template>
 
