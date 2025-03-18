@@ -110,8 +110,6 @@ const multipleDelete = ()=>{
                         {{ testimonial.message}}
                     </td>
 
-
-
                     <td class="px-6 py-4">
                         <Link href="route('user.edit',user.id)" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit Testimonial</Link>
                     </td>

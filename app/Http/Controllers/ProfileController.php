@@ -74,9 +74,12 @@ class ProfileController extends Controller
             $file = $request->file('image');
 
             // Store the file in the 'public' disk under the 'profile-pictures' directory
-            $path = $file->store('profile-pictures', 'public');
+            $path = $file->store('profile-pictures', [
+                "disk"=>"s3",
+                "visibility"=>"public"
+            ]);
 
-            $filePath = Storage::disk('public')->url($path);
+            $filePath = Storage::disk('s3')->url($path);
 
             // save the file path to the user's profile in the database
             $user = $request->user();

@@ -69,9 +69,12 @@ class PortfolioController extends Controller
             $file = $request->file('image');
 
             // Store the file in the 'public' disk under the 'profile-pictures' directory
-            $path = $file->store('services-pictures', 'public');
+            $path = $file->store('project-pictures', [
+                "disk"=>"s3",
+                "visibility"=>"public"
+            ]);
 
-            $filePath = Storage::disk('public')->url($path);
+            $filePath = Storage::disk('s3')->url($path);
 
         //store service
         $project['image'] = $filePath;
