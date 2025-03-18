@@ -16,9 +16,8 @@ const props = defineProps({
 
 <template>
     <GuestLayout>
-    <Title class="mt-32"/>
+        <Title title="Portfolio" description="We worked and build a range of project with our client" class="mt-32"/>
     <div>
-
 
 <portfolio :projects="projects"/>
 

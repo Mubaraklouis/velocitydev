@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 <template>
     <GuestLayout>
-    <Title class="mt-32"/>
+    <Title title="Service" description="We provide a wide range of services to our clients" class="mt-32"/>
     <div>
     <service  :services="services"/>
 
