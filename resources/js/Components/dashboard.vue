@@ -22,7 +22,7 @@
       </div>
     </div>
   </template>
-  <style></style>
+
   <script setup lang="ts">
   import { onMounted } from "vue";
  import Graph from "@/composable/Chart";
@@ -32,6 +32,10 @@
    * chartBluePrint: Is a function used to get a chart type and it properties
    *
    **/
+
+
+
+   
 
   const Chart = new Graph();
 
