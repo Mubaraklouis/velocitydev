@@ -25,7 +25,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .
-        file: docker/Dockerfile # Point to actual Dockerfile
+        file: docker/dockerfile # Point to actual Dockerfile
         push: true
         tags: mubaraklouis/velocitydev:1.0.0
         build-args: |
