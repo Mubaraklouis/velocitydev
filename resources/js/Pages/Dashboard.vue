@@ -11,6 +11,7 @@ import TestimonialTable from './Client/testimonials/partials/testimonialTable.vu
 
    <TestimonialTable/>
    <dashboard/>
+   <div></div>
 
   </AuthenticatedLayout>
 </template>
