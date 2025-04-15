@@ -37,7 +37,7 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Run setup commands during build
 RUN /usr/local/bin/entrypoint.sh
 
-EXPOSE 8000
+EXPOSE 8001
 
 # Keep the original CMD
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

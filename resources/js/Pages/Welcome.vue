@@ -19,6 +19,9 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
         <Services />
         <Portfolio />
         <portfolio2 />
+        <div>
+           <div></div>
+        </div>
 
         <Testimonial :testimonialsFirstBatch="$page.props.testimonialsFirstBatch"
             :testimonialsSecondBatch="$page.props.testimonialsSecondBatch"
