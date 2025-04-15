@@ -25,7 +25,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .
-        file: ./docker/Dockerfilee
+        file: ./docker/Dockerfile
         push: true
         tags: mubaraklouis/velocitydev:latest
         cache-from: type=registry,ref=mubaraklouis/velocitydev:latest
