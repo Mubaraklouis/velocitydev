@@ -20,7 +20,7 @@ import Testimonial from "@/customComponenents/testinmonials/testimonial.vue";
         <Portfolio />
         <portfolio2 />
         <div>
-            
+           <div></div>
         </div>
 
         <Testimonial :testimonialsFirstBatch="$page.props.testimonialsFirstBatch"
